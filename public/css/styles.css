@@ -130,6 +130,8 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   margin: 0;
+  background-color: #f0faf9;
+  color: #010101;
 }
 
 /***********************/
@@ -137,33 +139,32 @@ html {
 /***********************/
 /* Black */ /* #010101 */
 
-/* #800020 */
-/* #66001A */
-/* #520015 */
-/* #420011 */
-
-/* #4f2f2f */
-/* #2f4f4f */
-/* #426F6F */
+/* #8e5656 */
+/* #703f37 */
+/* #f0faf9 */
 /* #568E8E */
-/* #94bebe */
-/* #d1e4e4 */
-
-/* #8e7256 */
+/* #9bf8f8 */
+/* #faf2ed */
+/* #b9524b */
 
 /* #8e5656 */
+/* #7d94b5 */
+/* #c29591 */
+/* #703f37 */
+/* #b6c199 */
+/* #f0faf9; */
 
 /***********************/
 /* Spacing System */
 /***********************/
-/* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128*/
+/* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
 
 /***********************/
 /* Header */
 /***********************/
 header {
-  background-color: #010101;
-  height: 6.4rem;
+  background-color: #f0faf9;
+  height: 7rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -177,14 +178,23 @@ header {
   cursor: pointer;
   margin-left: 1.2rem;
 }
-
+.c-title {
+  display: inline-block;
+  transform: translateX(0.15rem);
+}
+.logo-link {
+  text-decoration: none;
+}
 /***********************/
 /* Navigation */
 /***********************/
 nav {
   color: #8e5656;
   font-size: 1.6rem;
-  font-family: "Crimson Text Regular";
+  font-family: "Josefin Slab Semi Bold";
+}
+.main-nav {
+  margin-top: 0.95rem;
 }
 .main-nav-list {
   list-style: none;
@@ -197,12 +207,30 @@ nav {
   display: inline-block;
   text-decoration: none;
   color: #8e5656;
-  transition: all 0.3s;
+  transition: all 0.7s;
 }
 
-.main-nav-list a:hover,
-.main-nav-list a:active {
-  color: #af8e8e;
+.link-highlight {
+  color: #010101 !important;
+}
+.link-structure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 3rem;
+}
+
+.link-embellishment {
+  cursor: pointer;
+  width: 5rem;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(1.7rem);
+  transition: 0.4s linear all;
+}
+.link-embellishment.embellishment-show {
+  display: block;
+  opacity: 1;
 }
 
 /***********************/
@@ -222,7 +250,7 @@ nav {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: 800ms opacity ease-in-out;
+  transition: 900ms opacity ease-in-out;
   transition-delay: 200ms;
 }
 .slide[data-active] {
@@ -237,8 +265,12 @@ nav {
   object-fit: cover;
   object-position: center;
 }
-
-/* alternative */
+.img-3 {
+  object-position: 60% 60% !important;
+}
+.img-4 {
+  object-position: 85% 85% !important;
+}
 .slider-button {
   z-index: 2;
   display: flex;
@@ -251,7 +283,7 @@ nav {
   top: 50%;
   width: 4rem;
   height: 5rem;
-  transform: translateY(50%);
+  transform: translateY(30%);
   color: rgba(255, 255, 255, 1);
   cursor: pointer;
   border-radius: 40rem;
@@ -260,15 +292,15 @@ nav {
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 .slider-button > span {
-  transform: translateY(-0.44rem);
+  transform: translateY(-0.33rem);
 }
 
 .slider-button:hover,
@@ -286,9 +318,340 @@ nav {
 .slider-button.next {
   right: 1rem;
 }
-/* .img-2 {
- object-position: top left;
+
+/***********************/
+/* About Us Home Description */
+/***********************/
+.about-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60rem;
+  background-color: #f0faf9;
+}
+.description-container {
+  width: 50%;
+  color: #8e5656;
+  margin-top: 13rem;
+  height: 20rem;
+}
+.description-container h1 {
+  font-family: "Allura Regular", "Times New Roman", Times, serif;
+
+  font-size: 6.8rem;
+}
+.description-container {
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.description-container > p {
+  font-size: 2rem;
+  font-family: "Amarelle Regular", "Times New Roman", Times, serif;
+}
+.embellishment {
+  width: 10rem;
+  transform: translateY(-1rem);
+}
+.escape-font {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/***********************/
+/* Z-Layout */
+/***********************/
+
+.z-layout-top {
+  display: flex;
+  height: 55rem;
+}
+
+.z-layout-top-description {
+  display: flex;
+  background-color: #faf2ed;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.z-layout-bottom-description {
+  display: flex;
+  background-color: #faf2ed;
+  width: 50%;
+
+  justify-content: center;
+  align-items: center;
+}
+.z-layout-bottom {
+  display: flex;
+}
+.z-layout-inner-description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+.z-layout-image {
+  width: 50%;
+  object-fit: cover;
+  height: 55rem;
+}
+.z-layout-image-top {
+  object-position: 70% 70%;
+}
+.z-layout-image-bottom {
+  object-position: 55% 55%;
+}
+.inner-description-title {
+  font-size: 2.5rem;
+  font-family: "Josefin Slab Semi Bold Italic", sans-serif;
+  font-style: italic;
+  /* font-size: 3rem;
+  font-family: "Charmonman Regular"; */
+  color: #010101;
+  align-self: center;
+}
+.inner-description-subtitle {
+  font-size: 2rem;
+  font-family: "EB Garamond Regular", "Courier New", Courier, monospace;
+}
+.inner-description-paragraph {
+  font-size: 1.6rem;
+  font-family: "EB Garamond Regular", "Courier New", Courier, monospace;
+  /* font-family: "Crimson Text Regular", "Courier New", Courier, monospace; */
+}
+/* .button {
+  font-size: 1.4rem;
+  width: 13rem;
+  height: 5rem;
+  text-align: center;
+  background-color: #8e5656;
+  border-style: double;
+  border-width: 2px;
+  border-color: #703f37;
+  cursor: pointer;
+  color: #faf2ed;
+  font-family: "Romana BT", sans-serif;
+ 
 } */
+/* .button:hover {
+  background-color: #b9524b;
+} */
+
+/* Alternative Button # 1*/
+/* .button{
+  font-size: 1.4rem;
+  width: 13rem;
+  height: 5rem;
+  text-align: center;
+  background-color: #8e5656;
+  border-style: double;
+  border-width: 2px;
+  border-color: #703f37 ;
+  cursor: pointer;
+  color: #faf2ed;
+  font-family: "Romana BT", cursive;
+   border-radius: 64% 0% 64% 0%;
+} */
+/* .button:hover{
+  background-color: #b9524b ;
+} */
+
+/* Alternative Button # 2*/
+
+/* .button {
+  padding: .9rem 1.7rem;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  background-color:  hsl(0, 0%, 12%);
+  border: solid 1px #1e1e1e;
+  box-shadow: inset 0 0 0 2px white;
+  margin-right: 1em;
+  cursor: pointer;
+  font-family: "Romana BT", sans-serif;
+}
+.z-layout-top .button{
+  transform: translateY(1.5rem);
+}
+
+.z-layout-bottom .button{
+  transform: translateY(2rem);
+}
+.button:hover {
+  background-color: hsl(0, 0%, 20%);
+  box-shadow: inset 0 0 0 4px white;
+}
+
+.button:active {
+  background-color: hsl(0, 0%, 30%)
+}
+
+.button:visited {
+  background-color: hsl(0, 0%, 20%);
+} */
+
+/* Alternative Button # 3*/
+/* .button {
+  height: 5.5rem;
+  width: 18rem;
+  background-color: #faf2ed;
+  border: 2px solid;
+  letter-spacing: 2.5px;
+  font-family: "Romana BT", sans-serif;
+  cursor: pointer;
+  
+
+}
+.button{
+  transition:  1s ease-in-out;
+}
+.button:hover {
+  background-color: #8e5656;
+  color: white;
+  font-family: "Romana BT Bold", sans-serif;
+  border: 2px solid  #8e5656;
+}
+.button:active {
+  background-color: #8e5656;
+  color: white;
+  font-family: "Romana BT Bold", sans-serif;
+  border: 2px solid  #8e5656;
+} */
+
+/* Alternative Button # 4*/
+.button {
+  height: 5.5rem;
+  width: 18rem;
+  background-color: #faf2ed;
+  border: 2px solid;
+  letter-spacing: 2.5px;
+  font-family: "Romana BT", sans-serif;
+  cursor: pointer;
+}
+.button {
+  transition: background-color 0.3s ease-out, color 1.3s ease-out;
+}
+.button:hover {
+  background-color: #8e5656;
+  color: white;
+  font-family: "Romana BT Bold", sans-serif;
+  border: 2px solid #8e5656;
+}
+.button:active {
+  background-color: #8e5656;
+  color: white;
+  font-family: "Romana BT Bold", sans-serif;
+  border: 2px solid #8e5656;
+}
+.z-layout-top-description .button {
+  transform: translateY(1.5rem);
+}
+.z-layout-bottom-description .button {
+  transform: translateY(3rem);
+}
+
+/***********************/
+/* Dish Gallery */
+/***********************/
+.dish-gallery-container {
+  width: auto;
+  max-width: 100vw;
+  height: 55rem;
+  background-color: #f0faf9;
+}
+.dish-gallery-top {
+  height: 100%;
+  width: 100%;
+  display: flex;
+ 
+
+}
+.dish-gallery-bottom {
+  height: 100%;
+  width: 100%;
+  display: flex;
+;}
+.dish-gallery-title {
+}
+.dish-gallery-img {
+
+  min-width: 0;
+  width: 100%;
+
+
+  /* object-fit: cover; */
+
+ 
+}
+/***********************/
+/* Footer */
+/***********************/
+
+/***********************/
+/* Menu Page */
+/***********************/
+.menu-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 70rem;
+  font-size: 1.4rem;
+  gap: 3rem;
+
+  background-color: #f0faf9;
+}
+.menu-title {
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+  font-size: 6rem;
+  font-family: "Romana BT Roman", "Times New Roman", Times, serif;
+  letter-spacing: 1.5rem;
+}
+.menu-title-lines {
+  display: inline-block;
+  transform: translateY(-0.6rem);
+}
+.dish-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  font-family: "EB Garamond Regular";
+  /* font-family: "Crimson Text Regular", "Courier New", Courier, monospace; */
+}
+.dish-description:last-child {
+  margin-bottom: 2.5rem;
+}
+.course-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.course-title {
+  font-size: 6rem;
+  margin: 1.2rem 0 4.6rem 0;
+  font-family: "Amarelle Regular";
+  color: #703f37;
+}
+
+.tilde {
+  transform: translateY(0.14rem);
+  display: inline-block;
+  color: #703f37;
+}
+
+.dish-description > .title {
+  font-size: 1.5rem;
+  color: #703f37;
+}
+
 @font-face {
   font-family: "Charmonman Regular";
   src: url("/fonts/Charmonman-Regular.ttf") format("truetype");
@@ -308,10 +671,75 @@ nav {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Amarelle Italic";
+  src: url("/fonts/AmarelleDemoItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
 
 @font-face {
   font-family: "Crimson Text Regular";
-  src: url("/fonts/CrimsonText-regular.ttf") format("truetype");
+  src: url("/fonts/CrimsonText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Allura Regular";
+  src: url("/fonts/Allura-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Josefin Slab Italic";
+  src: url("/fonts/JosefinSlab-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Josefin Slab Semi Bold";
+  src: url("/fonts/JosefinSlab-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Josefin Slab Semi Bold Italic";
+  src: url("/fonts/JosefinSlab-SemiBoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Romana BT";
+  src: url("/fonts/RomanaBT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Romana BT Roman";
+  src: url("/fonts/RomanaBTRoman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Romana BT Bold";
+  src: url("/fonts/RomanaBoldBT.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EB Garamond Regular";
+  src: url("/fonts/EBGaramond-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "EB Garamond Medium";
+  src: url("/fonts/EBGaramond-Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

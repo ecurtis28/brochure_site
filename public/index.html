@@ -4,55 +4,237 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saphrel</title>
+    <title>Cattedrale</title>
     <link rel="stylesheet" href="css/styles.css" />
 
     <script src="javascript/slider.js" defer></script>
+    <script src="javascript/embellishment.js" defer></script>
   </head>
   <body>
     <header class="header">
-      <h1 class="logo-title">Saphrel</h1>
+      <a class="logo-link" href="./">
+        <h1 class="logo-title"><span class="c-title">C</span>attedrale</h1></a
+      >
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Our Story</a></li>
-          <li><a href="#">Locations</a></li>
-          <li><a href="#">Reservations</a></li>
+          <li class="link-structure">
+            <a class="link" href="#">Contact Us</a
+            ><img
+              src="/images/Text Embellishment 2 Clean.png "
+              alt=""
+              class="link-embellishment"
+            />
+          </li>
+          <li class="link-structure">
+            <a class="link" href="./menu">Menu</a>
+            <img
+              src="/images/Text Embellishment 2 Clean.png "
+              alt=""
+              class="link-embellishment"
+            />
+          </li>
+          <li class="link-structure">
+            <a class="link" href="#">Our Story</a
+            ><img
+              src="/images/Text Embellishment 2 Clean.png "
+              alt=""
+              class="link-embellishment"
+            />
+          </li>
+          <li class="link-structure">
+            <a class="link" href="#">Location</a
+            ><img
+              src="/images/Text Embellishment 2 Clean.png "
+              alt=""
+              class="link-embellishment"
+            />
+          </li>
+          <li class="link-structure">
+            <a class="link" href="./reservations">Reservations & Orders</a
+            ><img
+              src="/images/Text Embellishment 2 Clean.png "
+              alt=""
+              class="link-embellishment"
+            />
+          </li>
         </ul>
       </nav>
     </header>
 
-    <section class="noselect" aria-label="Newest Photos">
+    <section id="picture-album" class="noselect" aria-label="Newest Photos">
       <div class="slider" data-slider>
         <div class="slider-button prev" data-slider-button="prev">
-          <span >&#8249;</span>
+          <span>&#8249;</span>
         </div>
         <div class="slider-button next" data-slider-button="next">
-          <span >&#8250;</span>
+          <span>&#8250;</span>
         </div>
         <ul data-slides>
           <li class="slide" data-active>
             <img
-              src="https://cdn.pixabay.com/photo/2016/11/18/14/05/brick-wall-1834784_960_720.jpg"
+              src="/images/restaurant-side-shot.jpg"
               alt="Picture of Restaurant"
             />
           </li>
           <li class="slide">
             <img
-              class="img-2"
               src="https://images.pexels.com/photos/370984/pexels-photo-370984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Picture of Wine Glass and Dish"
+              alt="Picture of Restaurant Interior #1"
             />
           </li>
           <li class="slide">
             <img
-              src="https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Picture of Wine Glass"
+              class="img-3"
+              src="/images/pexels-adrien-olichon-3534744.jpg"
+              alt="Picture of Restaurant Interior #2"
+            />
+          </li>
+          <li class="slide">
+            <img
+              class="img-4"
+              src="/images/pexels-photo-1673876.jpeg"
+              alt="Picture of Dessert"
             />
           </li>
         </ul>
       </div>
+    </section>
+    <section id="about-section">
+      <div class="about-container">
+        <div class="description-container">
+          <h1>About Us</h1>
+          <img
+            class="embellishment"
+            src="/images/Text Embellishment 1 black.png"
+            alt="Text Embellishment"
+          />
+          <p>
+            Taking inspiration from classical Abruzzo Cuisine<span
+              class="escape-font"
+              >.</span
+            >
+            Cattedrale seeks to take the old world flavors reminiscent of L<span
+              class="escape-font"
+              >'</span
+            >Aquila and Sulmona and bring them to Providence<span
+              class="escape-font"
+              >,</span
+            >
+            Rhode Island<span class="escape-font">.</span> Located in the
+            northern section of DePasquale Plaza
+            <span class="escape-font">,</span> Cattedrale resides in a ornate
+            Italianate building historically inspired by the ninteenth century
+            Providence Custom House<span class="escape-font">.</span> Rooted in
+            tradition Cattedrale seeks to provide insight of the rustic life of
+            Abruzzo to a modern audience<span class="escape-font">.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="z-layout-section">
+      <div class="z-layout-top">
+        <div class="z-layout-top-description">
+          <div class="z-layout-inner-description">
+            <h2 class="inner-description-title">Hours</h2>
+            <p class="inner-description-paragraph">
+              Monday - Wednesday | 4:00 p.m. - 11:00 p.m.
+            </p>
+            <p class="inner-description-paragraph">
+              Thursday | 5:00 p.m. - 9:30 p.m.
+            </p>
+            <p class="inner-description-paragraph">
+              Friday | 3:00 p.m. - 11:00 p.m.
+            </p>
+            <p class="inner-description-paragraph">
+              Saturday | 5:00 p.m. - 9:30 p.m.
+            </p>
+            <p class="inner-description-paragraph">
+              Sunday | 3:00 p.m. - 11:00 p.m.
+            </p>
+            <a href=""><button class="button">RESERVATION</button></a>
+          </div>
+        </div>
+        <img
+          class="z-layout-image z-layout-image-top"
+          src="/images/pexels-adrien-olichon-3534750.jpg"
+          alt="Dining Room with Waiter"
+        />
+      </div>
+
+      <div class="z-layout-bottom">
+        <img
+          class="z-layout-image z-layout-image-bottom"
+          src="/images/pexels-jonathan-borba-2878741.jpg"
+          alt="Picture of Lamb Dish"
+        />
+        <div class="z-layout-bottom-description">
+          <div class="z-layout-inner-description">
+            <h2 class="inner-description-title">Direct National Shipping</h2>
+            <h3 class="inner-description-subtitle">
+              Enjoy Abruzzo at home with our own food delivery service
+            </h3>
+            <p class="inner-description-paragraph">
+              We're bringing you the Idyllic taste of classical Italy from our
+              kitchen nation wide
+            </p>
+
+            <a href="./reservations">
+              <button class="button">Order Online</button></a
+            >
+          </div>
+          <!--   <h2 class="inner-description-title">Signature Dishes</h2>
+            <p class="inner-description-paragraph">
+              Gnocchi Caratti
+            </p>
+            <p class="inner-description-paragraph">Vasto Escabeche</p>
+            <p class="inner-description-paragraph">
+              Parrozzo
+            </p>
+            <p class="inner-description-paragraph">Porchetta Abruzzese</p>
+             <p class="inner-description-paragraph">Bruschetta</p>
+             <p class="inner-description-paragraph">Zeppole di San Giuseppe</p>
+           
+            <a href="./menu"> <button class="button">MENU</button></a> -->
+        </div>
+      </div>
+    </section>
+    <section class="dish-gallery-container">
+      <h2 class="dish-gallery-title">Signature Dishes</h2>
+
+      <div class="dish-gallery-top">
+      <img
+        src="images/pexels-adrien-olichon-3534744.jpg"
+        alt=""
+        class="dish-gallery-img"
+      />
+      <img
+        src="images/pexels-creative-vix-370984.jpg"
+        alt=""
+        class="dish-gallery-img"
+      />
+      <img
+        src="images/pexels-creative-vix-370984.jpg"
+        alt=""
+        class="dish-gallery-img"
+      />
+    </div>
+    <div class="dish-gallery-bottom">
+      <img
+        src="images/pexels-creative-vix-370984.jpg"
+        alt=""
+        class="dish-gallery-img"
+      />
+      <img
+        src="images/pexels-creative-vix-370984.jpg"
+        alt=""
+        class="dish-gallery-img"
+      />
+      <img
+        src="images/pexels-creative-vix-370984.jpg"
+        alt=""
+        class="dish-gallery-img"
+      />
+    </div>
     </section>
   </body>
 </html>
