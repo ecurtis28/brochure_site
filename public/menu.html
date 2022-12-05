@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cattedrale</title>
     <link rel="stylesheet" href="css/styles.css" />
-
-    <script src="javascript/slider.js" defer></script>
     <script src="javascript/embellishment.js" defer></script>
+    <script src="javascript/footerDescription.js" defer></script>
+    <script src="javascript/currentHours.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -27,14 +27,14 @@
           </li>
           <li class="link-structure">
             <a class="link" href="./menu">Menu</a>
-           <img
-                src="/images/Text Embellishment 2 Clean.png "
-                alt=""
-                class="link-embellishment"
+            <img
+              src="/images/Text Embellishment 2 Clean.png"
+              alt=""
+              class="link-embellishment"
             />
           </li>
           <li class="link-structure">
-            <a class="link" href="#">Our Story</a
+            <a class="link" href="./orders">Orders</a
             ><img
               src="/images/Text Embellishment 2 Clean.png "
               alt=""
@@ -42,7 +42,8 @@
             />
           </li>
           <li class="link-structure">
-            <a class="link" href="#">Location</a
+            <a class="link" href="https://goo.gl/maps/zG7NRqyHQf39THm58"
+              >Location</a
             ><img
               src="/images/Text Embellishment 2 Clean.png "
               alt=""
@@ -50,7 +51,7 @@
             />
           </li>
           <li class="link-structure">
-            <a class="link" href="./reservations">Reservations & Orders</a
+            <a class="link" href="./reservations">Reservations</a
             ><img
               src="/images/Text Embellishment 2 Clean.png "
               alt=""
@@ -67,20 +68,20 @@
           <h2 class="course-title">Appetizer</h2>
 
           <div class="dish-description">
-            <p class="title">
+            <p id="bruschetta" class="title">
               <span class="tilde">~</span> Bruschetta
               <span class="tilde">~</span>
             </p>
-            <p class="description">
-              Bread spread with salt and oil, and vegetables such as tomato and
-              zucchini, and mozzarella.
+            <p class="description-text">
+              Pagnotta bread spread with salt and oil, and topped with mozzarella, tomato and
+              zucchini
             </p>
             <p class="price">14 $</p>
           </div>
 
           <div class="dish-description">
             <p class="title"> <span class="tilde">~</span> Mussels with Saffron  <span class="tilde">~</span></p>
-            <p class="description">
+            <p class="description-text">
               Steamed mussels prepared with parsley, onion, bay leaf, white
               wine, olive oil, and saffron sauce
             </p>
@@ -88,8 +89,8 @@
           </div>
 
           <div class="dish-description">
-            <p class="title">  <span class="tilde">~</span> Gnocchi Caratti  <span class="tilde">~</span> </p>
-            <p class="description">
+            <p id="gnocchi-caratti" class="title">  <span class="tilde">~</span> Gnocchi Caratti  <span class="tilde">~</span> </p>
+            <p class="description-text">
               Gnocchi with bacon, eggs, herbs and pecorino cheese
             </p>
             <p class="price">14 $</p>
@@ -101,7 +102,7 @@
             <p class="title">
               <span class="tilde">~</span> Arrosticini with Olive Oil Herb Sauce and Ciriola Bread  <span class="tilde">~</span>
             </p>
-            <p class="description">
+            <p class="description-text">
               Skewered lamb with a house olive oil herb sauce and morning baked
               ciriola bread
             </p>
@@ -109,8 +110,9 @@
           </div>
 
           <div class="dish-description">
-            <p class="title">  <span class="tilde">~</span> Vasto Escabeche  <span class="tilde">~</span> </p>
-            <p class="description">
+            <a class="escabeche-anchor" name="escabeche-anchor"></a>
+            <p id="escabeche" class="title">  <span class="tilde">~</span> Vasto Escabeche  <span class="tilde">~</span> </p>
+            <p class="description-text">
               Flour fried fish in a vinegar sugar garlic peppercorn
               marinade
             </p>
@@ -119,7 +121,7 @@
 
           <div class="dish-description">
             <p class="title">  <span class="tilde">~</span> Pizza di Pasqua with Le Virtù Soup  <span class="tilde">~</span> </p>
-            <p class="description">
+            <p class="description-text">
               A slice of rustic pizza with cheese and pepper and a soup with
               legumes, vegetables and pork
             </p>
@@ -127,8 +129,8 @@
           </div>
 
           <div class="dish-description">
-            <p class="title">  <span class="tilde">~</span> Porchetta Abruzzese  <span class="tilde">~</span> </p>
-            <p class="description">
+            <p id="porchetta-abruzzese" class="title">  <span class="tilde">~</span> Porchetta Abruzzese  <span class="tilde">~</span> </p>
+            <p class="description-text">
               A moist boneless-pork roast, slow-roasted with rosemary, garlic,
               and pepper
             </p>
@@ -139,7 +141,7 @@
           <h2 class="course-title">Dessert</h2>
           <div class="dish-description">
             <p class="title">  <span class="tilde">~</span> Ferratelle with Torrone Nurzia <span class="tilde">~</span> </p>
-            <p class="description">
+            <p class="description-text">
               An anise flavored waffle cookie with a side of hazelnut chocolate
               nougat
             </p>
@@ -147,8 +149,8 @@
           </div>
 
           <div class="dish-description">
-            <p class="title">  <span class="tilde">~</span> Parrozzo  <span class="tilde">~</span> </p>
-            <p class="description">
+            <p id="parrozzo" class="title">  <span class="tilde">~</span> Parrozzo  <span class="tilde">~</span> </p>
+            <p class="description-text">
               A traditional cake made from crushed almonds, and orange zest;
               coated in chocolate
             </p>
@@ -157,7 +159,7 @@
 
           <div class="dish-description">
             <p class="title">  <span class="tilde">~</span> Bocconotti  <span class="tilde">~</span> </p>
-            <p class="description">
+            <p class="description-text">
               A pastry with a filling made from cocoa powder, cinnamon, and
               toasted almonds
             </p>
@@ -165,8 +167,8 @@
           </div>
 
           <div class="dish-description">
-            <p class="title">  <span class="tilde">~</span> Zeppole di San Giuseppe  <span class="tilde">~</span></p>
-            <p class="description">
+            <p id="zeppole" class="title">  <span class="tilde">~</span> Zeppole di San Giuseppe  <span class="tilde">~</span></p>
+            <p class="description-text">
               A deep-fried fritter topped with custard and powdered sugar and a
               filling of pastry cream
             </p>
@@ -174,6 +176,67 @@
           </div>
         </div>
       </div>
+      
     </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="description-flex description-flex-one">
+          <div class="footer-description-container">
+            <h3>Location</h3>
+            <div class="single-description">
+              <a target="_blank" href="https://goo.gl/maps/zG7NRqyHQf39THm58"
+                >92 Spruce St</a
+              >
+              <a target="_blank" href="https://goo.gl/maps/zG7NRqyHQf39THm58"
+                >Providence, RI, US</a
+              >
+            </div>
+          </div>
+
+          <div class="footer-description-container">
+            <h3>Contact</h3>
+            <a class="description" href="tel:401-839-8862">401-839-8862</a>
+            <a
+              class="description"
+              href="mailto:contact@cattedraleprovidence.com"
+              >contactus@cattedraleprovidence.com</a
+            >
+          </div>
+        </div>
+        <div class="footer-icon-container">
+          <img
+            class="footer-embellishment one"
+            src="/images/Footer Embellishment1.png"
+            alt="Embellishment"
+          />
+
+          <h1 class="footer-icon"><a href="/index.html#top">Cattedrale</a></h1>
+          <img
+            class="footer-embellishment two"
+            src="/images/Footer Embellishment3.png"
+            alt="Embellishment"
+          />
+        </div>
+        <div class="description-flex description-flex-two">
+          <div class="footer-description-container">
+            <h3>Private Dining</h3>
+            <a class="description" href="./reservations.html">Book an Event</a>
+            <a
+              class="description"
+              href="mailto:reservations@cattedraleprovidence.com"
+              >reservations@cattedraleprovidence.com</a
+            >
+          </div>
+          <div class="footer-description-container">
+            <h3>Today's Hours</h3>
+            <div class="single-description">
+              <a class="today" href="/index.html#hours"></a>
+              <a class="footer-hours" href="/index.html#hours"></a>
+              <a class="pm" href="/index.html#hours"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

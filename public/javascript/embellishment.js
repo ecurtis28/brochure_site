@@ -1,5 +1,5 @@
 const links = document.querySelectorAll(".link-structure");
-console.log("test");
+
 
 links.forEach((link) => {
   link.addEventListener("mouseenter", () => {

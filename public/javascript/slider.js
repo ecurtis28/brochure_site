@@ -3,11 +3,11 @@ let slides = document.querySelector("[data-slides]");
 let offset = 0;
 
 let activeSlide;
-
+let slideActive = true;
 let newIndex;
 
-// clearTimeout(timer);
-// let timer = setTimeout(() => {});
+let timer;
+
 function pushSlide() {
   activeSlide = slides.querySelector("[data-active]");
   offset = 1;
@@ -23,15 +23,16 @@ function pushSlide() {
   slides.children[newIndex].dataset.active = true;
   delete activeSlide.dataset.active;
 }
-let autoSlide = setInterval((pushSlide), 9000);
+let autoSlide = setInterval(pushSlide, 9000);
 
-console.log("test");
-// let slides;
-// let offset;
-// let activeSlide;
-// let newIndex;
 buttons.forEach((button) => {
-  button.addEventListener("click", () => {
+  let click = 0;
+  button.setAttribute("parameter", "button");
+  button.addEventListener("click", nextSlide);
+
+  function nextSlide() {
+    click++;
+    console.log(button);
     offset = button.dataset.sliderButton === "next" ? 1 : -1;
     slides = button.closest("[data-slider]").querySelector("[data-slides]");
 
@@ -44,6 +45,34 @@ buttons.forEach((button) => {
     slides.children[newIndex].dataset.active = true;
     delete activeSlide.dataset.active;
     clearInterval(autoSlide);
-    autoSlide = setInterval((pushSlide), 9000);
-  });
+
+    autoSlide = setInterval(pushSlide, 9000);
+
+    if (click > 0) button.removeEventListener("click", nextSlide);
+
+    timerDelay();
+  }
+
+  function timerDelay() {
+    button.removeEventListener("click", nextSlide);
+    let startDate = Date.now();
+    let currentDate;
+
+    const topMargin = 2120;
+    const bottomMargin = 2090;
+    setInterval(() => {
+      currentDate = Date.now();
+      if (
+        currentDate - startDate <= topMargin &&
+        currentDate - startDate >= bottomMargin
+      ) {
+        // it was a second
+    
+        button.addEventListener("click", nextSlide);
+        clearInterval();
+        click = 0;
+        return;
+      }
+    }, 30);
+  }
 });

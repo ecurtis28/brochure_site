@@ -9,6 +9,9 @@
 
     <script src="javascript/slider.js" defer></script>
     <script src="javascript/embellishment.js" defer></script>
+    <script src="javascript/dishGallery.js" defer></script>
+    <script src="javascript/currentHours.js" defer></script>
+    <script src="javascript/footerDescription.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -28,13 +31,13 @@
           <li class="link-structure">
             <a class="link" href="./menu">Menu</a>
             <img
-              src="/images/Text Embellishment 2 Clean.png "
+              src="/images/Text Embellishment 2 Clean.png"
               alt=""
               class="link-embellishment"
             />
           </li>
           <li class="link-structure">
-            <a class="link" href="#">Our Story</a
+            <a class="link" href="./orders">Orders</a
             ><img
               src="/images/Text Embellishment 2 Clean.png "
               alt=""
@@ -42,7 +45,8 @@
             />
           </li>
           <li class="link-structure">
-            <a class="link" href="#">Location</a
+            <a class="link" href="https://goo.gl/maps/zG7NRqyHQf39THm58"
+              >Location</a
             ><img
               src="/images/Text Embellishment 2 Clean.png "
               alt=""
@@ -50,7 +54,7 @@
             />
           </li>
           <li class="link-structure">
-            <a class="link" href="./reservations">Reservations & Orders</a
+            <a class="link" href="./reservations">Reservations</a
             ><img
               src="/images/Text Embellishment 2 Clean.png "
               alt=""
@@ -96,6 +100,14 @@
               alt="Picture of Dessert"
             />
           </li>
+
+          <li class="slide">
+            <img
+              class="img-5"
+              src="/images/pexels-huỳnh-đạt-2313037.jpg"
+              alt="Picture of Lower Interior"
+            />
+          </li>
         </ul>
       </div>
     </section>
@@ -127,12 +139,15 @@
             Providence Custom House<span class="escape-font">.</span> Rooted in
             tradition Cattedrale seeks to provide insight of the rustic life of
             Abruzzo to a modern audience<span class="escape-font">.</span>
+            <!-- Seeks to bring the rustic life of Abruzzo to a modern audience -->
           </p>
         </div>
       </div>
     </section>
+
     <section class="z-layout-section">
       <div class="z-layout-top">
+        <a class="anchor-link" name="hours"></a>
         <div class="z-layout-top-description">
           <div class="z-layout-inner-description">
             <h2 class="inner-description-title">Hours</h2>
@@ -151,7 +166,7 @@
             <p class="inner-description-paragraph">
               Sunday | 3:00 p.m. - 11:00 p.m.
             </p>
-            <a href=""><button class="button">RESERVATION</button></a>
+            <a href=""><button class="button">Reservation</button></a>
           </div>
         </div>
         <img
@@ -199,42 +214,146 @@
       </div>
     </section>
     <section class="dish-gallery-container">
-      <h2 class="dish-gallery-title">Signature Dishes</h2>
+      <!-- Make dish gallery image title animate appear disappear -->
+
+      <!-- Alter gallery pictures with photoshop to change lighting color/saturation to make them fit in with the other color scheme and images -->
+      <!-- Change gallery links so that the dish selected is in the middle of the screen -->
+      <!-- Make the order and reservation button links take the user to the respective parts of the reservations & order page -->
+      <!-- If the change in color doesn't make the contrast distinct enough for dish-gallery title then consider adding a secondary color as a border to the titles -->
+      <!-- If there is no built in way of doing it with a property, I can simply add another h3 make it the same position as other h3, remove it from flow and make it lower on z index compared to other title -->
+      <!-- Then it will look like a border  make sure to write this in tools.txt as a technique to use later-->
+      <div class="dish-gallery-top-gap"></div>
 
       <div class="dish-gallery-top">
-      <img
-        src="images/pexels-adrien-olichon-3534744.jpg"
-        alt=""
-        class="dish-gallery-img"
-      />
-      <img
-        src="images/pexels-creative-vix-370984.jpg"
-        alt=""
-        class="dish-gallery-img"
-      />
-      <img
-        src="images/pexels-creative-vix-370984.jpg"
-        alt=""
-        class="dish-gallery-img"
-      />
-    </div>
-    <div class="dish-gallery-bottom">
-      <img
-        src="images/pexels-creative-vix-370984.jpg"
-        alt=""
-        class="dish-gallery-img"
-      />
-      <img
-        src="images/pexels-creative-vix-370984.jpg"
-        alt=""
-        class="dish-gallery-img"
-      />
-      <img
-        src="images/pexels-creative-vix-370984.jpg"
-        alt=""
-        class="dish-gallery-img"
-      />
-    </div>
+        <a href="./menu#escabeche-anchor" class="dish-gallery-img-container">
+          <img
+            src="images/escabeche 2_cropped_lighting.png"
+            alt=""
+            class="dish-gallery-img"
+          />
+          <h3 class="dish-gallery-img-title hide-fog">Vasto Escabeche</h3>
+        </a>
+        <a href="./menu#zeppole" class="dish-gallery-img-container">
+          <img
+            src="images/zeppole 2_cropped_lighting.png"
+            alt=""
+            class="dish-gallery-img"
+          />
+          <h3 class="dish-gallery-img-title hide-fog">
+            Zeppole di San Giuseppe
+          </h3>
+        </a>
+        <a href="./menu#porchetta-abruzzese" class="dish-gallery-img-container">
+          <img
+            src="images/Porchetta Abruzzese 2_cropped_lighting.png"
+            alt=""
+            class="dish-gallery-img"
+          />
+          <h3 class="dish-gallery-img-title hide-fog">Porchetta Abruzzese</h3>
+        </a>
+      </div>
+      <div class="dish-gallery-bottom">
+        <a href="./menu#parrozzo" class="dish-gallery-img-container">
+          <img
+            src="images/parrozzo_resized_lighting.png"
+            alt=""
+            class="dish-gallery-img"
+          />
+          <h3 class="dish-gallery-img-title hide-fog">Parrozzo</h3>
+        </a>
+        <a href="./menu#gnocchi-caratti" class="dish-gallery-img-container">
+          <img
+            src="images/gnocchi 5_cropped_lighting.png"
+            alt=""
+            class="dish-gallery-img"
+          />
+          <h3 class="dish-gallery-img-title hide-fog">Gnocchi Caratti</h3>
+        </a>
+        <a href="./menu#bruschetta" class="dish-gallery-img-container">
+          <img
+            src="images/bruschetta_cropped_lighting.png"
+            alt=""
+            class="dish-gallery-img"
+          />
+          <h3 class="dish-gallery-img-title hide-fog">Bruschetta</h3>
+        </a>
+      </div>
+      <div class="dish-gallery-bottom-gap"></div>
     </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="description-flex description-flex-one">
+          <div class="footer-description-container">
+            <h3>Location</h3>
+            <div class="single-description">
+              <a target="_blank" href="https://goo.gl/maps/zG7NRqyHQf39THm58"
+                >92 Spruce St</a
+              >
+              <a target="_blank" href="https://goo.gl/maps/zG7NRqyHQf39THm58"
+                >Providence, RI, US</a
+              >
+            </div>
+          </div>
+
+          <div class="footer-description-container">
+            <h3>Contact</h3>
+            <a class="description" href="tel:401-839-8862">401-839-8862</a>
+            <a
+              class="description"
+              href="mailto:contact@cattedraleprovidence.com"
+              >contactus@cattedraleprovidence.com</a
+            >
+          </div>
+        </div>
+        <div class="footer-icon-container">
+          <img
+            class="footer-embellishment one"
+            src="/images/Footer Embellishment1.png"
+            alt="Embellishment"
+          />
+
+          <h1 class="footer-icon"><a href="/index.html#top">Cattedrale</a></h1>
+          <img
+            class="footer-embellishment two"
+            src="/images/Footer Embellishment3.png"
+            alt="Embellishment"
+          />
+        </div>
+        <div class="description-flex description-flex-two">
+          <div class="footer-description-container">
+            <h3>Private Dining</h3>
+            <a class="description" href="./reservations.html">Book an Event</a>
+            <a
+              class="description"
+              href="mailto:reservations@cattedraleprovidence.com"
+              >reservations@cattedraleprovidence.com</a
+            >
+          </div>
+          <div class="footer-description-container">
+            <h3>Today's Hours</h3>
+            <div class="single-description">
+              <a class="today" href="/index.html#hours"></a>
+              <a class="footer-hours" href="/index.html#hours"></a>
+              <a class="pm" href="/index.html#hours"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
+
+<!-- Critiques to return and fix. Ask others for their opinion on. -->
+
+<!-- Z-Layout-Buttons whether to be all caps or capital case -->
+
+<!-- Whether to leave a gap between dish-gallery and z-layout or find a way to fill the space and make it more coherent -->
+
+<!-- If gap stays whether to make it the same color as Z-Layout description background or keep it the header gray -->
+
+<!-- Ask about box shadows -->
+
+<!-- Change Dining Menu text and style to something more suitable. Change the left and right text embellishment to one of these instead -->
+<!-- https://www.123rf.com/photo_60000681_vector-set-of-ornate-calligraphic-vintage-elements-dividers-and-page-decorations.html -->
+<!-- Ask whether I should change the reservation scroll bar animation/style -->
+<!-- Ask whether there should be space between top of reservation/order images and header -->

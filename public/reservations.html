@@ -1,71 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cattedrale</title>
-</head>
-<body>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Cattedrale</title>
-        <link rel="stylesheet" href="css/styles.css" />
-    
-        <script src="javascript/slider.js" defer></script>
-        <script src="javascript/embellishment.js" defer></script>
-      </head>
-      <body>
-        <header class="header">
-            <a class="logo-link" href="./">
-              <h1 class="logo-title"><span class="c-title">C</span>attedrale</h1></a
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/669aaac836.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript/embellishment.js" defer></script>
+    <script src="javascript/revealForm.js" defer></script>
+    <script src="javascript/footerDescription.js" defer></script>
+    <script src="javascript/currentHours.js" defer></script>
+    <script src="javascript/inputValidation.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo-link" href="./">
+        <h1 class="logo-title"><span class="c-title">C</span>attedrale</h1></a
+      >
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="link-structure">
+            <a class="link" href="#">Contact Us</a
+            ><img
+              src="/images/Text Embellishment 2 Clean.png "
+              alt=""
+              class="link-embellishment"
+            />
+          </li>
+          <li class="link-structure">
+            <a class="link" href="./menu">Menu</a>
+            <img
+              src="/images/Text Embellishment 2 Clean.png"
+              alt=""
+              class="link-embellishment"
+            />
+          </li>
+          <li class="link-structure">
+            <a class="link" href="./orders">Orders</a
+            ><img
+              src="/images/Text Embellishment 2 Clean.png "
+              alt=""
+              class="link-embellishment"
+            />
+          </li>
+          <li class="link-structure">
+            <a class="link" href="https://goo.gl/maps/zG7NRqyHQf39THm58"
+              >Location</a
+            ><img
+              src="/images/Text Embellishment 2 Clean.png "
+              alt=""
+              class="link-embellishment"
+            />
+          </li>
+          <li class="link-structure">
+            <a class="link" href="./reservations">Reservations</a
+            ><img
+              src="/images/Text Embellishment 2 Clean.png "
+              alt=""
+              class="link-embellishment"
+            />
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- <div class="reservation-img-container">
+          <img src="/images/reservation_img.png" alt="Picture of Italian Cuisine" class="reservation-img">
+        </div> -->
+    <div class="img-container">
+      <img
+        src="/images/reservation_img_850.png"
+        alt="Picture of Italian Cuisine"
+        class="reservation-img"
+      />
+    </div>
+    <section class="reservation-description">
+      <div class="reservations-title-container">
+        <h3 class="reservations-title">Reservations</h3>
+        <img
+          class="embellishment"
+          src="/images/Text Embellishment 1 black.png"
+          alt="Text Embellishment"
+        />
+      </div>
+      <div class="reservation-description-container">
+        <p class="reservation-description">
+          Due to the periods of high guest attendance, reservations are
+          recommended.
+        </p>
+        <p class="reservation-description">
+          Reservations are held for 30 minutes before the next guest on the
+          waitlist is prioritized.
+        </p>
+        <p class="reservation-description">
+          To reserve a table or room. Either enter in the your reservation
+          information below inside the form; or refer to the phone number in the
+          description.
+        </p>
+        <p class="reservation-description">
+          <a href="tel:401-739-2317">Reservation Line: 401-739-2317</a>
+        </p>
+      </div>
+
+      <div class="reservation-form-container">
+        <div class="icon-container">
+          <i class="fa-solid icon fa-angle-down"></i>
+        </div>
+        <form action="/reservation" method="POST" class="reservation-form">
+          <div class="name-container">
+            <div class="name form-container">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" />
+              <div class="input-errors">
+                <p class="input-error letter-error">
+                  This field can only have letters.
+                </p>
+                <p class="input-error empty-error">
+                  This field must not be empty.
+                </p>
+              </div>
+            </div>
+            <div class="name form-container">
+              <label for="fname">Last Name</label>
+              <input type="text" id="lname" name="lname" />
+              <div class="input-errors">
+                <p class="input-error letter-error">
+                  This field can only have letters.
+                </p>
+                <p class="input-error empty-error">
+                  This field must not be empty.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="secondary-container">
+            <div class="guest-container form-container">
+              <label for="guests">Number of Guests</label>
+              <input type="text" id="guests" name="guests" />
+              <div class="input-errors">
+                <p class="input-error empty-error">
+                  This field must not be empty.
+                </p>
+                <p class="input-error non-number-error">
+                  This field can only have positive numbers.
+                </p>
+                <p class="input-error capacity-error">
+                  The minimum guest capacity is 1 and the maximum is 110.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tertiary-container">
+            <div class="phone-container form-container">
+              <label for="phone"
+                >Phone Number
+                <span class="optional-input opt_1">* Optional</span></label
+              >
+              <input type="tel" id="phone" name="phone" maxlength="12" />
+              <div class="input-errors">
+                <p class="input-error">This field can only contain numbers.</p>
+                <p class="input-error phone-error-format">
+                  This field must have have a 10 number format.
+                </p>
+              </div>
+            </div>
+            <div class="email-container form-container">
+              <label for="email"
+                >Email
+                <span class="optional-input opt_2">* Optional</span></label
+              >
+              <input type="email" id="email" name="email" />
+              <div class="input-errors">
+                <p class="input-error email-format-error">
+                  This field must have an email address format.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="time-date-container">
+            <div class="date-container form-container">
+              <label for="date">Reservation Date </label>
+              <input type="text" id="date" name="date" />
+              <div class="input-errors">
+                <p class="input-error date-format-error">
+                  This field must have a numerical date format.
+                </p>
+                <p class="input-error empty-error">
+                  This field must not be empty.
+                </p>
+              </div>
+            </div>
+            <div class="time-container form-container">
+              <label for="time">Time</label>
+              <input type="text" id="time" name="time" />
+              <div class="input-errors">
+                <p class="input-error time-format-error"></p>
+                <p class="input-error empty-error">
+                  This field must not be empty.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="button-container">
+            <button class="submit" type="button">Reserve</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer class="footer reservation-footer">
+      <div class="footer-container">
+        <div class="description-flex description-flex-one">
+          <div class="footer-description-container">
+            <h3>Location</h3>
+            <div class="single-description">
+              <a target="_blank" href="https://goo.gl/maps/zG7NRqyHQf39THm58"
+                >92 Spruce St</a
+              >
+              <a target="_blank" href="https://goo.gl/maps/zG7NRqyHQf39THm58"
+                >Providence, RI, US</a
+              >
+            </div>
+          </div>
+
+          <div class="footer-description-container">
+            <h3>Contact</h3>
+            <a class="description" href="tel:401-839-8862">401-839-8862</a>
+            <a
+              class="description"
+              href="mailto:contact@cattedraleprovidence.com"
+              >contactus@cattedraleprovidence.com</a
             >
-            <nav class="main-nav">
-              <ul class="main-nav-list">
-                <li class="link-structure">
-                  <a class="link" href="#">Contact Us</a
-                  ><img
-                    src="/images/Text Embellishment 2 Clean.png "
-                    alt=""
-                    class="link-embellishment"
-                  />
-                </li>
-                <li class="link-structure">
-                  <a class="link" href="./menu">Menu</a>
-                 <img
-                      src="/images/Text Embellishment 2 Clean.png "
-                      alt=""
-                      class="link-embellishment"
-                  />
-                </li>
-                <li class="link-structure">
-                  <a class="link" href="#">Our Story</a
-                  ><img
-                    src="/images/Text Embellishment 2 Clean.png "
-                    alt=""
-                    class="link-embellishment"
-                  />
-                </li>
-                <li class="link-structure">
-                  <a class="link" href="#">Location</a
-                  ><img
-                    src="/images/Text Embellishment 2 Clean.png "
-                    alt=""
-                    class="link-embellishment"
-                  />
-                </li>
-                <li class="link-structure">
-                  <a class="link" href="./reservations">Reservations & Orders</a
-                  ><img
-                    src="/images/Text Embellishment 2 Clean.png "
-                    alt=""
-                    class="link-embellishment"
-                  />
-                </li>
-              </ul>
-            </nav>
-          </header>
-</body>
+          </div>
+        </div>
+        <div class="footer-icon-container">
+          <img
+            class="footer-embellishment one"
+            src="/images/Footer Embellishment1.png"
+            alt="Embellishment"
+          />
+
+          <h1 class="footer-icon"><a href="/index.html#top">Cattedrale</a></h1>
+          <img
+            class="footer-embellishment two"
+            src="/images/Footer Embellishment3.png"
+            alt="Embellishment"
+          />
+        </div>
+        <div class="description-flex description-flex-two">
+          <div class="footer-description-container">
+            <h3>Private Dining</h3>
+            <a class="description" href="./reservations.html">Book an Event</a>
+            <a
+              class="description"
+              href="mailto:reservations@cattedraleprovidence.com"
+              >reservations@cattedraleprovidence.com</a
+            >
+          </div>
+          <div class="footer-description-container">
+            <h3>Today's Hours</h3>
+            <div class="single-description">
+              <a class="today" href="/index.html#hours"></a>
+              <a class="footer-hours" href="/index.html#hours"></a>
+              <a class="pm" href="/index.html#hours"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
+
+<!-- Make location setion at bottom of Reservations page that is linked to when you click location nav link -->
+
+<!-- Ask critique whether it would be better to add placeholders on form inputs or not -->
