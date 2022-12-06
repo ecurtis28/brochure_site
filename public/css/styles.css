@@ -719,6 +719,11 @@ nav {
   justify-content: center;
   /* margin-left: 4.5rem; */
   transform: translateX(.25rem);
+
+  
+}
+.footer-icon-container > img{
+pointer-events: none;
 }
 .footer-container {
   display: flex;
