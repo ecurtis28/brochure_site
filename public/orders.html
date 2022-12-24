@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/669aaac836.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript/ordersInputValidation.js" defer></script>
+    <script src="javascript/revealForm.js" defer></script>
     <script src="javascript/embellishment.js" defer></script>
     <script src="javascript/currentHours.js" defer></script>
     <script src="javascript/footerDescription.js" defer></script>
+    <script src="javascript/ordersCart.js" defer></script>
+    <script src="javascript/ordersGallery.js" defer></script>
+    
 
     <title>Cattedrale</title>
   </head>
@@ -19,7 +29,7 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li class="link-structure">
-            <a class="link" href="#">Contact Us</a
+            <a class="link" href="./contact">Contact Us</a
             ><img
               src="/images/brochure_images/text_embellishment_2.png"
               alt=""
@@ -69,7 +79,165 @@
         class="reservation-img"
       />
     </div>
-    <footer class="footer ">
+
+    <section class="orders-description">
+      <div class="orders-title-container">
+        <h3 class="orders-title">Orders</h3>
+        <img
+          class="embellishment"
+          src="/images/Text Embellishment 1 black.png"
+          alt="Text Embellishment"
+        />
+      </div>
+      <div class="orders-gallery">
+        <div class="orders-gallery-container">
+          <div class="orders-gallery-photo-container">
+            <p class="orders-item-title">Ferratelle</p>
+          <img src="/images/orders_ferratelle.jpg" alt="Picture of Ferratelle" class="orders-gallery-photo">
+          
+           <p class="price">17 $</p>
+           <div class="shipping-included"><span class="asterisk">*</span> Shipping Included</div>
+          <div class="orders-item-description-container">
+            
+            <button class="orders-item-description-button">Add To Cart</button></div>
+
+        </div>
+        <div class="orders-gallery-photo-container">
+          <p class="orders-item-title">Torrone Nurzia</p>
+          <img src="/images/orders_torrone.jpg" alt="Picture of Torrone Nurzia" class="orders-gallery-photo">
+          
+           <p class="price">15 $</p>
+           <div class="shipping-included"><span class="asterisk">*</span> Shipping Included</div>
+          <div class="orders-item-description-container">
+            
+            <button class="orders-item-description-button">Add To Cart</button></div>
+          </div>
+          <div class="orders-gallery-photo-container">
+            <p class="orders-item-title">Parrozzo</p>
+          <img src="/images/orders_parrozzo.jpg" alt="Picture of Parrozzo" class="orders-gallery-photo">
+          
+           <p class="price">32 $</p>
+           <div class="shipping-included"><span class="asterisk">*</span> Shipping Included</div>
+          <div class="orders-item-description-container">
+            
+            <button class="orders-item-description-button">Add To Cart</button></div>
+          </div>
+          <div class="orders-gallery-photo-container">
+            <p class="orders-item-title">Bocconotti</p>
+          <img src="/images/orders_bocconotti.jpg" alt="Picture of Bocconotti" class="orders-gallery-photo">
+          
+           <p class="price">25 $</p>
+           <div class="shipping-included"><span class="asterisk">*</span> Shipping Included</div>
+          <div class="orders-item-description-container">
+            
+            <button class="orders-item-description-button">Add To Cart</button></div>
+          </div>
+          <div class="orders-gallery-photo-container">
+            <p class="orders-item-title">Zeppole di San Giuseppe</p>
+          <img src="/images/orders_zeppole.jpg" alt="Zeppole di San Giuseppe" class="orders-gallery-photo">
+          
+           <p class="price">24 $</p>
+           <div class="shipping-included"><span class="asterisk">*</span> Shipping Included</div>
+          <div class="orders-item-description-container">
+            
+            <button class="orders-item-description-button">Add To Cart</button></div>
+          </div>
+        </div>   
+
+        <div class="orders-cart-container">
+          <h2 class="orders-cart-title">Cart</h2>
+          <p class="orders-cart-description">Delivery will take 1-5 days depending on the location.</p>
+          <table class="orders-cart">
+          <tr class="table-headers-row">
+            <th class="table-headers"><span>Item</span> </th>
+            <th class="table-headers"><span>Amount</span> </th>
+            <th class="table-headers"><span>Price</span> </th>
+            
+
+            
+          </tr>
+          <!-- <tr class="table-data-row table-row-1">
+          <td>Test1</td>
+          <td>Test2</td>
+          <td>Test3<span><button class="table-button"><i class="fa-solid fa-x"></i></button></span></td>
+          
+        </tr> -->
+        
+        
+      
+        </table></div>
+        <div class="overlay"></div>
+
+<img  class="orders-gallery-preview" src="/images/orders_ferratelle.jpg" alt="">
+     
+      </div>
+      <div class="orders-description-container">
+        <p class="orders-description">
+         
+        </p>
+        
+        
+      </div>
+
+    <div class="orders-form-container">
+      <div class="icon-container">
+        <i class="fa-solid icon fa-angle-down"></i>
+      </div>
+      <form
+        action="/orders"
+        method="POST"
+        class="orders-form"
+        spellcheck="false"
+      >
+        <div class="name-container">
+          <div class="name form-container">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Thomas" />
+            <div class="input-errors">
+              <p class="input-error letter-error">
+                This field can only have letters.
+              </p>
+              <p class="input-error empty-error">
+                This field must not be empty.
+              </p>
+            </div>
+          </div>
+          <div class="name form-container">
+            <label for="fname">Last Name</label>
+            <input type="text" id="lname" name="lname"  placeholder="Anderson"/>
+            <div class="input-errors">
+              <p class="input-error letter-error">
+                This field can only have letters.
+              </p>
+              <p class="input-error empty-error">
+                This field must not be empty.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="secondary-container">
+          
+     
+        
+          <div class="address form-container">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="256 Evergreen Ave. Barberton, OH" />
+            <div class="input-errors">
+              <p class="input-error empty-error">
+                This field must not be empty.
+              </p>
+              
+            
+            </div>
+          </div>
+        </div>
+       
+        <div class="button-container">
+          <button class="submit" type="button">Order</button>
+        </div>
+      </form>
+    </div>
+    <footer class="footer">
       <div class="footer-container">
         <div class="description-flex description-flex-one">
           <div class="footer-description-container">

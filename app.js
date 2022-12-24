@@ -19,6 +19,24 @@ app.get("/reservations", function (req, res) {
 app.get("/orders", function (req, res) {
   res.sendFile(__dirname + "/public/orders.html");
 });
+
+app.get("/contact", function (req, res) {
+  res.sendFile(__dirname + "/public/contact.html");
+});
+app.get("/reservations_success", function (req, res) {
+  res.sendFile(__dirname + "/public/reservations_success.html");
+});
+app.get("/orders_success", function (req, res) {
+  res.sendFile(__dirname + "/public/orders_success.html");
+});
+
+app.post("/orders", function (req, res) {
+  res.redirect("/orders_success");
+});
+
+app.post("/reservations", function (req, res) {
+  res.redirect("/reservations_success");
+});
 app.listen(3000, function () {
   console.log("Server started on port 3000");
 });

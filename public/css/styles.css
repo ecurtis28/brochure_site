@@ -283,10 +283,10 @@ nav {
   object-position: 85% 85% !important;
 }
 .img-5 {
-  object-position: 150% 150%;
+  object-position: center !important;
 }
 .img-6 {
-  object-position: 20% 20% !important;
+  object-position: center !important;
 }
 .slider-button {
   z-index: 2;
@@ -368,7 +368,8 @@ nav {
 }
 .description-container > p {
   font-size: 2rem;
-  font-family: "Amarelle Regular", "Times New Roman", Times, serif;
+  font-family: "EB Garamond Regular", "Times New Roman", Times, serif;
+  text-align: center;
 }
 .embellishment {
   width: 10rem;
@@ -616,14 +617,14 @@ nav {
 }
 .dish-gallery-top-gap {
   background-color: #f0faf9;
-  height: 15rem;
+  height: 2rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .dish-gallery-bottom-gap {
-  height: 15rem;
+  height: 2rem;
   width: 100%;
   background-color: #f0faf9;
 }
@@ -680,6 +681,53 @@ nav {
 .dish-gallery-img:hover {
   transform: scale(1.15);
 }
+/* Backdrop #1 */
+.dish-gallery-img-backdrop {
+  z-index: 2;
+  top: 2.525rem;
+  left: 1.4rem;
+  width: 10rem;
+  height: 2.5rem;
+  background-color: rgb(240, 250, 249, 0.35);
+  text-decoration: none;
+  position: absolute;
+
+  font-size: 2.2rem;
+}
+/* Backdrop #2 */
+
+/* .dish-gallery-img-backdrop {
+  z-index: 2;
+  top: 3.550rem;
+  left: 1.4rem;
+  width: 10rem;
+  height: 0.5rem;
+  background-color:rgb(240, 250, 249, 0.7);
+  text-decoration: none;
+  position: absolute;
+
+  font-size: 2.2rem;
+
+} */
+
+/* Backdrop #3 */
+/* .dish-gallery-img-backdrop {
+  z-index: 2;
+  top: 3.3rem;
+  left: 1.4rem;
+  width: 10rem;
+  height: 1rem;
+  background-color: rgb(185, 82, 75, 0.4);
+  text-decoration: none;
+  position: absolute;
+
+  font-size: 2.2rem;
+
+  border-radius: 10rem;
+} */
+.offset-1 {
+  left: 1.4rem !important;
+}
 .invisible-link {
   display: flex;
 }
@@ -712,18 +760,16 @@ nav {
 }
 .footer-icon-container {
   /* margin-bottom: 3rem; */
-  margin-top: -0.6rem;
+  margin-top: 0.6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* margin-left: 4.5rem; */
-  transform: translateX(.25rem);
-
-  
+  transform: translateX(0.25rem);
 }
-.footer-icon-container > img{
-pointer-events: none;
+.footer-icon-container > img {
+  pointer-events: none;
 }
 .footer-container {
   display: flex;
@@ -843,21 +889,21 @@ pointer-events: none;
 
 .description-flex {
   display: flex;
-  margin-top: 1.4rem;
+  margin-top: 2.6rem;
+  /* margin-top: 2.6rem; */
   gap: 5rem;
   max-width: 36.9rem;
 }
 .description-flex-one {
   /* margin-right: 10rem; */
   transform: translateX(-2.5rem);
-  
 }
 .description-flex-two {
   /* margin-left: 13rem; */
   transform: translateX(2.5rem);
 }
 .description-flex-two > .footer-description-container:last-child {
- transform: translateY(0.8rem);
+  transform: translateY(0.8rem);
 }
 
 .footer-icon > a,
@@ -928,12 +974,15 @@ pointer-events: none;
   font-size: 1.5rem;
   color: #703f37;
 }
-.escabeche-anchor {
-  transform: translateY(-31.5rem);
+.escabeche-anchor,
+.zeppole-anchor,
+.porchetta-anchor,
+.parrozzo-anchor,
+.gnocchi-anchor,
+.bruschetta-anchor {
+  transform: translateY(-28.5rem);
 }
-.zeppole-anchor {
-  transform: translateY(-31.5rem);
-}
+
 /***********************/
 /* Reservations Page */
 /***********************/
@@ -947,37 +996,47 @@ section.reservations-description {
   align-items: center;
   justify-content: center;
 }
-.reservations-title {
+.reservations-title,
+.orders-title {
   font-size: 6.8rem;
   margin-bottom: 1rem;
   color: #8e5656;
   font-family: "Allura Regular";
 }
-.reservations-title-container {
+.reservations-title-container,
+.orders-title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 4rem;
 }
-.reservation-description-container {
+.reservations-title-container {
+  transform: translateX(-4px);
+}
+.reservation-description-container,
+.orders-description-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-p.reservation-description {
+p.reservation-description,
+p.orders-description {
   font-family: "Romana BT";
   font-size: 1.3rem;
   color: #010101;
   margin-bottom: 1rem;
 }
 
-p.reservation-description:last-child {
+p.reservation-description:last-child,
+p.orders-description:last-child {
   margin: none;
 }
 p.reservation-description > a,
-p.reservation-description > a:visited {
+p.reservation-description > a:visited,
+p.orders-description > a,
+p.orders-description > a:visited {
   text-decoration: none;
   color: #010101;
   font-family: "Romana BT Bold";
@@ -1000,19 +1059,70 @@ p.reservation-description > a:visited {
 .icon-container:active {
   background-color: #9c6767;
 }
-.reservation-form-container {
+.reservation-form-container,
+.orders-form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: #010101;
 }
-.reservation-form {
+.reservation-form,
+.orders-form {
   overflow: hidden;
   background-color: #faf2ed;
   height: 0;
   width: 90rem;
   transition: height 0.55s ease-in-out;
+  /* margin-bottom: 3rem; */
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+
+  /* Default Color */
+  /* Color 1 */
+  color: #a17070;
+  /* Color 2  */
+  /* color: #6e4b45; */
+
+  /* Color 3  */
+  /* color: #703f37; */
+  /* Color 4 */
+  /* color:#b9524b; */
+  /* Color 5 */
+  /* color: #b86762; */
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  /* Default Color */
+  /* Color 1 */
+  /* color: #a17070; */
+  /* Color 2  */
+  /* color: #6e4b45; */
+  /* Color 3  */
+  /* color: #703f37; */
+  /* Color 4 */
+  /* color:#b9524b; */
+  /* Color 5 */
+  /* color:#b86762; */
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  /* Default Color */
+  /* Color 1 */
+  /* color: #a17070; */
+  /* Color 2  */
+  /* color: #6e4b45; */
+  /* Color 3  */
+  /* color: #703f37; */
+  /* Color 4 */
+  /* color:#b9524b; */
+  /* Color 5 */
+  /* color: #b86762; */
 }
 .on {
   width: 100rem;
@@ -1024,7 +1134,7 @@ p.reservation-description > a:visited {
   color: #8e5656;
 }
 .active {
-  height: 40rem;
+  height: 44.9rem;
 }
 .name-container,
 .secondary-container,
@@ -1037,7 +1147,9 @@ p.reservation-description > a:visited {
   justify-content: center;
   gap: 4rem;
 }
-
+/* .name-container{
+  margin-top: 4rem;
+} */
 .form-container {
   display: flex;
   flex-direction: column;
@@ -1057,7 +1169,8 @@ input:focus {
   background-color: #f0faf9;
 }
 
-.reservation-form > div > div > label {
+.reservation-form > div > div > label,
+.orders-form > div > div > label {
   margin: 0 0.21rem;
   font-family: "EB Garamond Regular";
   font-size: 1.55rem;
@@ -1080,19 +1193,32 @@ input:focus {
   align-items: center;
   margin-top: 3rem;
 }
-.date-container {
-}
-.time-container {
-}
 
 .button-container {
   margin-top: 3rem;
+  /* position: relative; */
   text-align: center;
 }
-.reservation-form button {
+.reservation-form button,
+.orders-form button {
+  /* position: absolute; */
   cursor: pointer;
   color: #703f37;
-  border: 1px solid black;
+  width: 6em;
+  height: 3.5rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  border: 1px solid #010101;
+  transition: all 0.1s ease-in-out;
+  font-family: "EB Garamond Regular";
+}
+.reservation-form button:hover,
+.orders-form button:hover,
+.reservation-form button:active,
+.orders-form button:active {
+  border-color: #703f37;
+
+  color: #010101;
 }
 
 .img-container {
@@ -1112,14 +1238,317 @@ input:focus {
 .input-errors {
   height: 1rem;
 }
-.phone-container {
-}
-.phone-error {
-}
+
 .show-error {
   display: block !important;
 }
-#guests {
+/***********************/
+/* Orders Page */
+/***********************/
+.orders-gallery {
+  margin-top: 6rem;
+}
+.orders-title-container {
+  transform: translateX(-0.35%);
+}
+
+.orders-gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.orders-gallery-photo-container > p {
+  margin-bottom: 0.8rem;
+}
+.orders-gallery-photo {
+  width: 20rem;
+
+  flex: 1 0 auto;
+  cursor: pointer;
+  border: solid 3px transparent;
+}
+.orders-item-description-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orders-item-title {
+  text-align: center;
+  font-size: 1.8rem;
+  transform: translateY(-2rem);
+  font-family: "Romana BT";
+}
+.orders-item-description-button {
+  margin-top: 0.4rem;
+  font-size: 1.3rem;
+  width: 8.5rem;
+  height: 2.5rem;
+  /* Black */ /* #010101 */
+  /* #a17070*/
+  /* #8e5656 */
+  /* #924e4e */
+  /* #703f37 */
+  /* #68362e */
+  /* #f0faf9 */
+  /* #faf2ed */
+  /* #b9524b */
+  color: #faf2ed;
+  background-color: #b9524b;
+  border: 1px solid #dababa;
+  box-shadow: 0 0 0 2px #68362e;
+  font-family: "Crimson Text Regular";
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.orders-item-description-button:hover {
+  color: #68362e;
+  background-color: #dababa;
+  border: 1px solid #b9524b;
+  box-shadow: 0 0 0 2px #faf2ed;
+}
+.orders-item-description-button:active {
+  color: #4b201a;
+  border: 1px solid #b9524b;
+  box-shadow: 0 0 0 1px #b9524b;
+  transition: none;
+}
+.orders-gallery-photo:hover {
+  border-color: #010101;
+  border-color: var(--hover-border-color);
+}
+.orders-gallery-photo:active {
+  border-color: #924e4e;
+  border-color: var(--active-border-color);
+}
+.orders-gallery-preview {
+  z-index: 4;
+
+  width: 60rem;
+  height: 60rem;
+  visibility: hidden;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+  z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.orders-gallery-preview-show {
+  visibility: visible;
+}
+
+.orders-form-container > .orders-form {
+  margin-bottom: 9rem;
+}
+.orders-form-container > .active {
+  height: 27.1rem;
+}
+.orders-cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.orders-cart {
+  width: 70rem;
+  height: auto;
+  border: solid #703f37 3px;
+  background: #faf2ed; /* #703f37 */
+  /* #68362e */
+}
+.table-headers {
+  width: 14rem;
+}
+.table-data {
+  width: 14rem;
+  text-align: center;
+}
+.table-headers-row {
+  /* margin-top: 0.1rem; */
+  border-top: none !important;
+}
+.table-data-row {
+  display: flex !important;
+
+  justify-content: space-evenly;
+}
+
+.table-data-row {
+  position: relative;
+}
+.table-button {
+  border: none;
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.2rem;
+  cursor: pointer;
+  padding: 0.1rem;
+  width: 4px;
+}
+
+.add-amount {
+  border: none;
+  position: absolute;
+  right: 32.2rem;
+  bottom: 0.2rem;
+  cursor: pointer;
+  padding: 0.1rem;
+  width: 4px;
+}
+
+.subtract-amount {
+  border: none;
+  position: absolute;
+  right: 30.6rem;
+  bottom: 0.2rem;
+  cursor: pointer;
+  padding: 0.1rem;
+  width: 4px;
+}
+.table-row .fa-x {
+  color: #b9524b;
+  font-size: 10px;
+}
+.table-row .fa-angle-up,
+.table-row .fa-angle-down {
+  color: #b9524b;
+  font-size: 10px;
+}
+
+.table-headers-row > span {
+  display: inline-block;
+}
+.orders-cart th {
+  font-family: "Romana BT Bold";
+  font-size: 1.4rem;
+  flex: 0 0 auto;
+}
+.orders-cart td {
+  font-family: "Romana BT Roman";
+  font-size: 1.3rem;
+  flex: 0 0 auto;
+}
+.orders-cart tr {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: solid 1px #010101;
+  border-left: none;
+  border-right: none;
+  position: relative;
+}
+.orders-cart tr:last-child {
+  border-bottom: none;
+}
+.orders-cart-title {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-family: "Romana BT";
+}
+.orders-cart-description {
+  margin-top: 1rem;
+  font-family: "EB Garamond Regular";
+  font-size: 1.3rem;
+  transform: translateY(-2.3rem);
+}
+
+.orders-gallery-photo-container > .price {
+  font-family: "EB Garamond Medium";
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 0.9rem;
+}
+.shipping-included {
+  text-align: center;
+  font-family: "EB Garamond Regular";
+  color: rgb(112, 63, 55, 0.7);
+  font-size: 1.2rem;
+}
+.asterisk {
+  display: inline-block;
+  margin-right: 0.1rem;
+  transform: translateY(0.2rem);
+}
+/* Orders Success Page */
+.orders-success-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 45rem;
+  background-color: #faf2ed;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2.2rem;
+  margin-bottom: 6.3rem;
+  font-family: "EB Garamond Regular";
+}
+.scroll-element {
+  visibility: hidden;
+  transform: translateY(-35.5rem);
+}
+.orders-success {
+  text-align: center;
+
+  font-size: 3rem;
+
+  position: relative;
+}
+
+.orders-success-redirect {
+  text-align: center;
+  position: relative;
+  display: block;
+}
+/***********************/
+/* Reservations Page */
+/***********************/
+.contact-footer {
+  position: relative;
+  bottom: 0px;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.contact-header{
+  font-size: 2rem;
+}
+.contact-description-container {
+  background-image: url("/images/brochure_images/ingredients_with_clipboard.jpg");
+
+  display: flex;
+  background-position: center;
+  background-position: 10% 10%;
+  max-width: 120rem;
+  height: 80rem;
+  position: relative;
+  transform: scale(1);
+  background-size: cover;
+  z-index: 3;
+}
+.contact-img {
 }
 
 @font-face {

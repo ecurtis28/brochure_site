@@ -21,7 +21,7 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li class="link-structure">
-            <a class="link" href="#">Contact Us</a
+            <a class="link" href="./contact">Contact Us</a
             ><img
               src="/images/brochure_images/text_embellishment_2.png"
               alt=""
@@ -108,6 +108,13 @@
               alt="Picture of Lower Interior"
             />
           </li>
+          <li class="slide">
+            <img
+              class="img-6"
+              src="/images/brochure_images/café_exterior.jpg"
+              alt="Picture of Outer Lower Interior Dining Area"
+            />
+          </li>
         </ul>
       </div>
     </section>
@@ -166,7 +173,9 @@
             <p class="inner-description-paragraph">
               Sunday | 3:00 p.m. - 11:00 p.m.
             </p>
-            <a href=""><button class="button">Reservation</button></a>
+            <a href="./reservations"
+              ><button class="button">Reservation</button></a
+            >
           </div>
         </div>
         <img
@@ -193,9 +202,7 @@
               kitchen nation wide
             </p>
 
-            <a href="./reservations">
-              <button class="button">Order Online</button></a
-            >
+            <a href="./orders"> <button class="button">Order Online</button></a>
           </div>
           <!--   <h2 class="inner-description-title">Signature Dishes</h2>
             <p class="inner-description-paragraph">
@@ -216,7 +223,7 @@
     <section class="dish-gallery-container">
       <!-- Make dish gallery image title animate appear disappear -->
 
-      <!-- Alter gallery pictures with photoshop to change lighting color/saturation to make them fit in with the other color scheme and images -->
+      <!-- Alter gallery pictures with photoshop to change lighting_darker color/saturation to make them fit in with the other color scheme and images -->
       <!-- Change gallery links so that the dish selected is in the middle of the screen -->
       <!-- Make the order and reservation button links take the user to the respective parts of the reservations & order page -->
       <!-- If the change in color doesn't make the contrast distinct enough for dish-gallery title then consider adding a secondary color as a border to the titles -->
@@ -225,61 +232,68 @@
       <div class="dish-gallery-top-gap"></div>
 
       <div class="dish-gallery-top">
-        <a href="./menu#escabeche-anchor" class="dish-gallery-img-container">
+        <a href="./menu#escabeche" class="dish-gallery-img-container">
           <img
-            src="images/brochure_images/escabeche_cropped_lighting.jpg"
+            src="images/brochure_images/escabeche_cropped_lighting_darker.jpg"
             alt=""
             class="dish-gallery-img"
           />
           <h3 class="dish-gallery-img-title hide-fog">Vasto Escabeche</h3>
+          <h3 class="dish-gallery-img-backdrop hide-fog"></h3>
         </a>
         <a href="./menu#zeppole" class="dish-gallery-img-container">
           <img
-            src="images/brochure_images/zeppole_cropped_lighting.jpg"
+            src="images/brochure_images/zeppole_cropped_lighting_darker.jpg"
             alt=""
             class="dish-gallery-img"
           />
           <h3 class="dish-gallery-img-title hide-fog">
             Zeppole di San Giuseppe
           </h3>
+          <h3 class="dish-gallery-img-backdrop hide-fog"></h3>
         </a>
-        <a href="./menu#porchetta-abruzzese" class="dish-gallery-img-container">
+        <a href="./menu#porchetta" class="dish-gallery-img-container">
           <img
-            src="images/brochure_images/porchetta_abruzzese_cropped_lighting.jpg"
+            src="images/brochure_images/porchetta_abruzzese_cropped_lighting_darker.jpg"
             alt=""
             class="dish-gallery-img"
           />
           <h3 class="dish-gallery-img-title hide-fog">Porchetta Abruzzese</h3>
+          <h3 class="dish-gallery-img-backdrop hide-fog"></h3>
         </a>
       </div>
       <div class="dish-gallery-bottom">
         <a href="./menu#parrozzo" class="dish-gallery-img-container">
           <img
-            src="images/brochure_images/parrozzo_resized_lighting.png"
+            src="images/brochure_images/parrozzo_resized_lighting_darker.jpg"
             alt=""
             class="dish-gallery-img"
           />
           <h3 class="dish-gallery-img-title hide-fog">Parrozzo</h3>
+          <h3 class="dish-gallery-img-backdrop hide-fog"></h3>
         </a>
-        <a href="./menu#gnocchi-caratti" class="dish-gallery-img-container">
+        <a href="./menu#gnocchi" class="dish-gallery-img-container">
           <img
-            src="images/brochure_images/gnocchi_cropped_lighting.jpg"
+            src="images/brochure_images/gnocchi_cropped_lighting_darker.jpg"
             alt=""
             class="dish-gallery-img"
           />
           <h3 class="dish-gallery-img-title hide-fog">Gnocchi Caratti</h3>
+          <h3 class="dish-gallery-img-backdrop hide-fog"></h3>
         </a>
         <a href="./menu#bruschetta" class="dish-gallery-img-container">
           <img
-            src="images/brochure_images/bruschetta_cropped_lighting.jpg"
+            src="images/brochure_images/bruschetta_cropped_lighting_darker.jpg"
             alt=""
             class="dish-gallery-img"
           />
           <h3 class="dish-gallery-img-title hide-fog">Bruschetta</h3>
+          <h3 class="dish-gallery-img-backdrop hide-fog"></h3>
         </a>
       </div>
       <div class="dish-gallery-bottom-gap"></div>
     </section>
+
     <footer class="footer">
       <div class="footer-container">
         <div class="description-flex description-flex-one">
@@ -330,7 +344,7 @@
             >
           </div>
           <div class="footer-description-container">
-            <h3>Today's Hours</h3>
+            <h3>Today's Hour</h3>
             <div class="single-description">
               <a class="today" href="/index.html#hours"></a>
               <a class="footer-hours" href="/index.html#hours"></a>
@@ -345,15 +359,9 @@
 
 <!-- Critiques to return and fix. Ask others for their opinion on. -->
 
-<!-- Z-Layout-Buttons whether to be all caps or capital case -->
-
-<!-- Whether to leave a gap between dish-gallery and z-layout or find a way to fill the space and make it more coherent -->
-
-<!-- If gap stays whether to make it the same color as Z-Layout description background or keep it the header gray -->
-
-<!-- Ask about box shadows -->
-
-<!-- Change Dining Menu text and style to something more suitable. Change the left and right text embellishment to one of these instead -->
-<!-- https://www.123rf.com/photo_60000681_vector-set-of-ornate-calligraphic-vintage-elements-dividers-and-page-decorations.html -->
-<!-- Ask whether I should change the reservation scroll bar animation/style -->
-<!-- Ask whether there should be space between top of reservation/order images and header -->
+<!-- Last Items to Complete -->
+<!-- Finish contact us page -->
+<!-- Create a load animation that can be used when going to different pages -->
+<!-- Use media queries so design doesnt breaks and it works on all devices -->
+<!-- Change the header background color so that it contrasts better with page and looks better -->
+<!-- Refactor code, remove redundant code and make it (primarily the css) compatible with most web browsers -->

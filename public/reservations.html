@@ -25,7 +25,7 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li class="link-structure">
-            <a class="link" href="#">Contact Us</a
+            <a class="link" href="./contact">Contact Us</a
             ><img
               src="/images/brochure_images/text_embellishment_2.png"
               alt=""
@@ -89,7 +89,7 @@
       </div>
       <div class="reservation-description-container">
         <p class="reservation-description">
-          Due to the periods of high guest attendance, reservations are
+          Due to periods of high guest attendance, reservations are
           recommended.
         </p>
         <p class="reservation-description">
@@ -97,7 +97,7 @@
           waitlist is prioritized.
         </p>
         <p class="reservation-description">
-          To reserve a table or room. Either enter in the your reservation
+          To reserve a table or room. Either enter in your reservation
           information below inside the form; or refer to the phone number in the
           description.
         </p>
@@ -110,11 +110,16 @@
         <div class="icon-container">
           <i class="fa-solid icon fa-angle-down"></i>
         </div>
-        <form action="/reservation" method="POST" class="reservation-form">
+        <form
+          action="/reservations"
+          method="POST"
+          class="reservation-form"
+          spellcheck="false"
+        >
           <div class="name-container">
             <div class="name form-container">
               <label for="fname">First Name</label>
-              <input type="text" id="fname" name="fname" />
+              <input type="text" id="fname" name="fname" placeholder="Thomas" />
               <div class="input-errors">
                 <p class="input-error letter-error">
                   This field can only have letters.
@@ -126,7 +131,12 @@
             </div>
             <div class="name form-container">
               <label for="fname">Last Name</label>
-              <input type="text" id="lname" name="lname" />
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="Anderson"
+              />
               <div class="input-errors">
                 <p class="input-error letter-error">
                   This field can only have letters.
@@ -140,7 +150,7 @@
           <div class="secondary-container">
             <div class="guest-container form-container">
               <label for="guests">Number of Guests</label>
-              <input type="text" id="guests" name="guests" />
+              <input type="text" id="guests" name="guests" placeholder="3" />
               <div class="input-errors">
                 <p class="input-error empty-error">
                   This field must not be empty.
@@ -160,7 +170,13 @@
                 >Phone Number
                 <span class="optional-input opt_1">* Optional</span></label
               >
-              <input type="tel" id="phone" name="phone" maxlength="12" />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                maxlength="12"
+                placeholder="401-368-2410"
+              />
               <div class="input-errors">
                 <p class="input-error">This field can only contain numbers.</p>
                 <p class="input-error phone-error-format">
@@ -173,7 +189,12 @@
                 >Email
                 <span class="optional-input opt_2">* Optional</span></label
               >
-              <input type="email" id="email" name="email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email@example.com"
+              />
               <div class="input-errors">
                 <p class="input-error email-format-error">
                   This field must have an email address format.
@@ -187,7 +208,13 @@
               <input type="text" id="date" name="date" />
               <div class="input-errors">
                 <p class="input-error date-format-error">
-                  This field must have a numerical date format.
+                  This field must have a date format.
+                </p>
+                <p class="input-error date-future-error">
+                  The future reservation date has a maximum limit of 2 years.
+                </p>
+                <p class="input-error date-past-error">
+                  You cannot enter a past date.
                 </p>
                 <p class="input-error empty-error">
                   This field must not be empty.
@@ -196,9 +223,19 @@
             </div>
             <div class="time-container form-container">
               <label for="time">Time</label>
-              <input type="text" id="time" name="time" />
+              <input
+                type="text"
+                id="time"
+                name="time"
+                placeholder="4:40 p.m."
+              />
               <div class="input-errors">
-                <p class="input-error time-format-error"></p>
+                <p class="input-error time-format-error">
+                  The field must have a time format.
+                </p>
+                <p class="input-error closing-time-error">
+                  Cattedrale is not open during the selected time.
+                </p>
                 <p class="input-error empty-error">
                   This field must not be empty.
                 </p>
@@ -277,3 +314,5 @@
 <!-- Make location setion at bottom of Reservations page that is linked to when you click location nav link -->
 
 <!-- Ask critique whether it would be better to add placeholders on form inputs or not -->
+<!-- If I do add placeholders make it so that it placeholder characters disappears one letter typed at a time so that it acts as a guide for people to type the right format -->
+<!-- Ask about which placeholder color looks the best -->
