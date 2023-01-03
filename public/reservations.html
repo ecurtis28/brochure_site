@@ -11,6 +11,7 @@
       src="https://kit.fontawesome.com/669aaac836.js"
       crossorigin="anonymous"
     ></script>
+    <script src="javascript/onLoad.js" defer></script>
     <script src="javascript/embellishment.js" defer></script>
     <script src="javascript/revealForm.js" defer></script>
     <script src="javascript/footerDescription.js" defer></script>
@@ -18,7 +19,7 @@
     <script src="javascript/inputValidation.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header hide-ele">
       <a class="logo-link" href="./">
         <h1 class="logo-title"><span class="c-title">C</span>attedrale</h1></a
       >
@@ -71,14 +72,14 @@
     <!-- <div class="reservation-img-container">
           <img src="/images/reservation_img.png" alt="Picture of Italian Cuisine" class="reservation-img">
         </div> -->
-    <div class="img-container">
+    <div class="img-container hide-ele">
       <img
         src="/images/brochure_images/reservation_img_850.jpg"
         alt="Picture of Italian Cuisine"
         class="reservation-img"
       />
     </div>
-    <section class="reservation-description">
+    <section class="reservation-description hide-ele">
       <div class="reservations-title-container">
         <h3 class="reservations-title">Reservations</h3>
         <img
@@ -247,7 +248,7 @@
         </form>
       </div>
     </section>
-    <footer class="footer reservation-footer">
+    <footer class="footer reservation-footer hide-ele">
       <div class="footer-container">
         <div class="description-flex description-flex-one">
           <div class="footer-description-container">

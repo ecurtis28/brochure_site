@@ -1,7 +1,11 @@
+function ordersGallery() {
+
 const photos = document.querySelectorAll(".orders-gallery-photo");
-const body = document.querySelector("body");
+
 const ordersGalleryPreview = document.querySelector(".orders-gallery-preview");
-const overlay = document.querySelector(".overlay")
+const overlay = document.querySelector(".overlay");
+
+const body = document.querySelector("body")
 
 let source;
 leaveGalleryPreviewFlag = false;
@@ -17,7 +21,7 @@ photos.forEach((photo) => {
       console.log(source);
       ordersGalleryPreview.setAttribute("src", source);
       ordersGalleryPreview.classList.add("orders-gallery-preview-show");
-      overlay.style.display = "block"
+      overlay.style.display = "block";
       setTimeoutFlag = true;
       setTimeout(() => {
         leaveGalleryPreviewFlag = true;
@@ -31,7 +35,6 @@ photos.forEach((photo) => {
 ordersGalleryPreview.addEventListener("mouseleave", function () {});
 
 const onClickOutside = (e) => {
-
   if (
     !e.target.classList.contains("orders-gallery-preview") &&
     ordersGalleryPreview.classList.contains("orders-gallery-preview-show")
@@ -43,7 +46,7 @@ const onClickOutside = (e) => {
     if (leaveGalleryPreviewFlag === true) {
       leaveGalleryPreviewFlag = false;
       ordersGalleryPreview.classList.remove("orders-gallery-preview-show");
-      overlay.style.display = "none"
+      overlay.style.display = "none";
       photos.forEach((photo) => {
         photo.style.setProperty("--hover-border-color", "#010101");
         photo.style.setProperty("--active-border-color", "#924e4e");
@@ -55,3 +58,5 @@ const onClickOutside = (e) => {
 };
 
 body.addEventListener("click", onClickOutside);
+}
+ordersGallery()

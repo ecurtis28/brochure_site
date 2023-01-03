@@ -1,2 +1,5 @@
-console.log(document.querySelector(".scroll-element"))
-document.querySelector(".scroll-element").scrollIntoView()
+
+if(document.querySelector(".scroll-element") !== null) {
+    document.querySelector(".scroll-element").scrollIntoView()
+    console.log('scroll')
+} 

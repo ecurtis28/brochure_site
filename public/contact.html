@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cattedrale</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="javascript/onLoad.js" defer></script>
     <script src="javascript/embellishment.js" defer></script>
     <script src="javascript/currentHours.js" defer></script>
     <script src="javascript/footerDescription.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header hide-ele">
       <a class="logo-link" href="./">
         <h1 class="logo-title"><span class="c-title">C</span>attedrale</h1></a
       >
@@ -61,19 +62,32 @@
         </ul>
       </nav>
     </header>
-    <div class="contact-container">
-      
-        <div class="contact-description-container">
-            <h2 class="contact-header">Contact Us</h2>
-            <p class="contact-description">For reservations, orders, or information we have a phone line available during open hours.</p>
-            <p class="contact-description-phone">401-839-8862</p>
-            <p class="contact-description">If you wish to learn more during closed hours, please send an email to the email address below.</p>
-            <p class="contact-description-small">(You can expect an answer from our customer service representative in 24 hours.)</p>
-            <p class="contact-description-email">contactus@cattedraleprovidence.com</p>
-        </div>
-        
+    <div class="contact-container hide-ele">
+      <div class="contact-description-container">
+        <h2 class="contact-header">Contact Us</h2>
+        <p class="contact-ele contact-description">
+          For reservations, orders, or information we have a phone line
+          available during open hours.
+        </p>
+        <a href="tel:4018398862"
+          ><p class="contact-ele contact-description-phone">401-839-8862</p>
+        </a>
+        <p class="contact-ele contact-description">
+          If you wish to learn more during closed hours, please send an email to
+          the email address below.
+        </p>
+        <a href="mailto:contactus@cattedraleprovidence.com">
+          <p class="contact-ele contact-description-email">
+            contactus@cattedraleprovidence.com
+          </p>
+        </a>
+        <p class="contact-ele contact-description-small">
+          (You can expect an answer from our customer service representative in
+          24 hours.)
+        </p>
+      </div>
     </div>
-    <footer class="contact-footer footer">
+    <footer class="contact-footer footer hide-ele">
       <div class="footer-container">
         <div class="description-flex description-flex-one">
           <div class="footer-description-container">
@@ -123,7 +137,7 @@
             >
           </div>
           <div class="footer-description-container">
-            <h3>Today's Hour</h3>
+            <h3>Today's Hours</h3>
             <div class="single-description">
               <a class="today" href="/index.html#hours"></a>
               <a class="footer-hours" href="/index.html#hours"></a>

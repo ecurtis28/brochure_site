@@ -7,14 +7,16 @@
     <title>Cattedrale</title>
     <link rel="stylesheet" href="css/styles.css" />
 
+    <script src="javascript/onLoad.js" defer></script>
     <script src="javascript/slider.js" defer></script>
     <script src="javascript/embellishment.js" defer></script>
     <script src="javascript/dishGallery.js" defer></script>
     <script src="javascript/currentHours.js" defer></script>
     <script src="javascript/footerDescription.js" defer></script>
+    
   </head>
   <body>
-    <header class="header">
+    <header class="header hide-ele">
       <a class="logo-link" href="./">
         <h1 class="logo-title"><span class="c-title">C</span>attedrale</h1></a
       >
@@ -65,7 +67,7 @@
       </nav>
     </header>
 
-    <section id="picture-album" class="noselect" aria-label="Newest Photos">
+    <section id="picture-album" class="noselect hide-ele" aria-label="Newest Photos">
       <div class="slider" data-slider>
         <div class="slider-button prev" data-slider-button="prev">
           <span>&#8249;</span>
@@ -118,8 +120,8 @@
         </ul>
       </div>
     </section>
-    <section id="about-section">
-      <div class="about-container">
+  
+      <section class="about-container hide-ele" >
         <div class="description-container">
           <h1>About Us</h1>
           <img
@@ -144,15 +146,15 @@
             <span class="escape-font">,</span> Cattedrale resides in a ornate
             Italianate building historically inspired by the ninteenth century
             Providence Custom House<span class="escape-font">.</span> Rooted in
-            tradition Cattedrale seeks to provide insight of the rustic life of
+            tradition Cattedrale provides insight of the rustic life of
             Abruzzo to a modern audience<span class="escape-font">.</span>
             <!-- Seeks to bring the rustic life of Abruzzo to a modern audience -->
           </p>
         </div>
-      </div>
-    </section>
+      </section>
+ 
 
-    <section class="z-layout-section">
+    <section class="z-layout-section hide-ele">
       <div class="z-layout-top">
         <a class="anchor-link" name="hours"></a>
         <div class="z-layout-top-description">
@@ -220,7 +222,7 @@
         </div>
       </div>
     </section>
-    <section class="dish-gallery-container">
+    <section class="dish-gallery-container hide-ele">
       <!-- Make dish gallery image title animate appear disappear -->
 
       <!-- Alter gallery pictures with photoshop to change lighting_darker color/saturation to make them fit in with the other color scheme and images -->
@@ -294,7 +296,7 @@
       <div class="dish-gallery-bottom-gap"></div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer hide-ele">
       <div class="footer-container">
         <div class="description-flex description-flex-one">
           <div class="footer-description-container">
@@ -344,7 +346,7 @@
             >
           </div>
           <div class="footer-description-container">
-            <h3>Today's Hour</h3>
+            <h3>Today's Hours</h3>
             <div class="single-description">
               <a class="today" href="/index.html#hours"></a>
               <a class="footer-hours" href="/index.html#hours"></a>
