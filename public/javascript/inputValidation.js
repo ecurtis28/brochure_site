@@ -16,7 +16,7 @@ const dateInputFutureError = document.querySelector(".date-future-error");
 const dateInputPastError = document.querySelector(".date-past-error");
 const timeInputError = document.querySelector(".time-format-error");
 const closingTimeError = document.querySelector(".closing-time-error");
-console.log("working still");
+
 let emailErrorFlag = false;
 let dateErrorFlag1 = false;
 let dateErrorFlag2 = false;
@@ -31,15 +31,12 @@ let timeNull0Decrement = 0;
 let flag1 = true;
 let flag2 = true;
 let flag3 = true;
-window.addEventListener("load", () => {
-  console.log("onload working successfully");
-});
 
 let futureDate = new Date();
 
 let futureDateTime = futureDate.getTime() + 7782000000;
 futureDate = new Date(futureDateTime);
-console.log(futureDate);
+
 var theYear = futureDate.getFullYear();
 var theMonth = futureDate.getMonth() + 1;
 var theDay = futureDate.getDate();
@@ -53,10 +50,10 @@ parentNames.forEach((parentName) => {
 
   input.addEventListener("input", function () {
     if (containsSpecialCharacters(input.value)) {
-      console.log("includes special characters");
+    
       inputError.classList.add("temporary");
     } else if (containsNumbers(input.value)) {
-      console.log("includes numbers");
+   
 
       inputError.classList.add("temporary");
     } else {
@@ -118,13 +115,13 @@ phoneErrorInput.addEventListener("input", () => {
   const showError = Array.from(classList).filter(
     (word) => word === "show-error"
   );
-  console.log(showError, phoneError2);
+
 
   if (numberLength === 0 || numberLength === 10) {
-    console.log(phoneErrorInput.value.length);
+   
 
     if (showError) {
-      console.log("success", phoneError2);
+    
       phoneError2.classList.remove("show-error");
     }
   }
@@ -171,7 +168,7 @@ submit.addEventListener("click", (e) => {
       containsSpecialCharacters(guestInput.value) === true ||
       containsLetters(guestInput.value) === true
     ) {
-      console.log("special characters or letters");
+    
       guestInputError.classList.add("show-error");
     } else {
       const guestInputArr = Array.from(guestInput.value);
@@ -184,7 +181,7 @@ submit.addEventListener("click", (e) => {
         }
       });
       if (includesDashesOnly === true) {
-        console.log("only dashes");
+   
         guestInputError.classList.add("show-error");
       }
     }
@@ -194,17 +191,11 @@ submit.addEventListener("click", (e) => {
       (Number(guestInput.value) < 1 && guestInput.value !== "") ||
       Number(guestInput.value) > 110
     ) {
-      console.log(guestInputError, Number(guestInput.value));
+   
       guestInputNumberError.classList.add("show-error");
     }
   }
-  // if (
-  //   // emailInput.value.charAt(0) === "@" ||
-  //   // (!emailInput.value.includes("@") && !emailInput.value.includes(".com")) //||
-  //   // emailInput.value.indexOf(".com") < emailInput.value.indexOf("@") ||
-  //   // emailInput.value.indexOf("@") + 1 === "." ||
-  //   // emailInput.value.length > emailInput.value.indexOf(".com")
-  // ) {
+
 
   parentNames.forEach((parentName) => {
     const input = parentName.children[1];
@@ -222,7 +213,7 @@ submit.addEventListener("click", (e) => {
   if (dateErrorFlag1 === true && dateInput.value.length !== 0) {
     dateInputError.classList.add("show-error");
     dateErrorFlag1 = false;
-    console.log(emptyDateShowError);
+   
 
     if (emptyDateShowError.length !== 0)
       dateInputError.classList.remove("show-error");
@@ -307,62 +298,49 @@ emailInput.addEventListener("input", () => {
     const positionArr = [];
     let keywordCount = 0;
 
-    console.log(
-      emailInput.value.length,
-
-      emailInput.value.indexOf(".com") + 4
-    );
+   
     const afterAtSign = emailInput.value.indexOf("@") + 1;
     if (emailInput.value.charAt(0) === "@") {
-      console.log("@ 1");
+     
       emailErrorFlag = true;
     }
     if (!emailInput.value.includes("@") || !emailInput.value.includes(".com")) {
-      console.log("no @ and .com");
+   
       emailErrorFlag = true;
     }
 
     if (emailInput.value.includes(".com") && emailInput.value.includes("@")) {
       if (emailInput.value.indexOf(".com") < emailInput.value.indexOf("@")) {
-        console.log(".com before @");
+        
         emailErrorFlag = true;
       }
     }
 
     if (emailInput.value.charAt(afterAtSign) === ".") {
-      console.log(". after @");
+   
       emailErrorFlag = true;
     }
 
     if (emailInput.value.slice(-4) !== ".com") {
-      console.log(".com not last in string");
+    
       emailErrorFlag = true;
     }
 
     if (emailInput.value.charAt(emailInput.value.indexOf("@") - 1) === ".") {
-      console.log(
-        "no . before @",
-        emailInput.value.charAt(emailInput.value.indexOf("@") - 1)
-      );
+    
       emailErrorFlag = true;
     }
 
     if (emailInput.value.charAt(emailInput.value.indexOf("@") + 1) === ".") {
-      console.log(
-        "no . after @",
-        emailInput.value.charAt(emailInput.value.indexOf("@") + 1)
-      );
+     
       emailErrorFlag = true;
     }
     if (emailInput.value.charAt(emailInput.value.indexOf(".com") - 1) === ".") {
-      console.log(
-        "no . before .com",
-        emailInput.value.charAt(emailInput.value.indexOf(".com") - 1)
-      );
+   
       emailErrorFlag = true;
     }
     if (emailInput.value.charAt(0) === ".") {
-      console.log("no . as first character");
+ 
       emailErrorFlag = true;
     }
 
@@ -386,10 +364,9 @@ emailInput.addEventListener("input", () => {
       }
       target1 = target1.replace("@", "_").replace(".com", "_-_-");
 
-      console.log(positionArr);
     }
     if (keywordCount > 2) {
-      console.log("duplicates");
+    
       emailErrorFlag = true;
     }
     if (emailInput.value.length === 0) {
@@ -411,11 +388,9 @@ dateInput.addEventListener("input", () => {
   const futureDateMS = Date.now() + 63113852000;
   const reservationDate = new Date(`${dateInput.value}`);
   reservationDay = reservationDate.getDay();
-  console.log("reservationDay:", reservationDay);
+
   const reservationDateMS = reservationDate.getTime();
 
-  console.log(currentDateMS, pastDateMS, futureDateMS, reservationDateMS);
-  console.log(dateInput.value);
 
   if (
     monthValidate() === undefined ||
@@ -453,10 +428,8 @@ timeInput.addEventListener("input", () => {
   if (timeInput.value.length === 0) {
     timeInputError.classList.remove("show-error");
   }
-  // if(timeErrorFlag2 === false) {
-  //   closingTimeError.classList.remove("show-error")
-  // }
-  console.log(timeInput.value.length);
+
+
 });
 
 function timeValidate() {
@@ -503,40 +476,40 @@ function timeValidate() {
       reservationDay = "saturday";
       break;
     default:
-      console.log("reservation day error");
+ 
   }
 
   switch (reservationDay) {
     case "sunday":
       validHours = openHours.sunday;
-      console.log("valid hours: ", validHours);
+     
       break;
     case "monday":
       validHours = openHours.monday;
-      console.log("valid hours: ", validHours);
+   
       break;
     case "tuesday":
       validHours = openHours.tuesday;
-      console.log("valid hours: ", validHours);
+   
       break;
     case "wednesday":
       validHours = openHours.wednesday;
-      console.log("valid hours: ", validHours);
+   
       break;
     case "thursday":
       validHours = openHours.thursday;
-      console.log("valid hours: ", validHours);
+   
       break;
     case "friday":
       validHours = openHours.friday;
-      console.log("valid hours: ", validHours);
+   
       break;
     case "saturday":
       validHours = openHours.saturday;
-      console.log("valid hours: ", validHours);
+   
       break;
     default:
-      console.log("reservation day error");
+     
   }
   if (
     containsNumbers(time1) &&
@@ -544,7 +517,7 @@ function timeValidate() {
     !containsSpecialCharacters(time1) &&
     time1Format === ":"
   ) {
-    console.log("working");
+   
     timeNull0Decrement = 1;
   } else if (
     containsNumbers(time1Double) &&
@@ -553,10 +526,10 @@ function timeValidate() {
     time1DoubleFormat === ":"
   ) {
     timeNull0Decrement = 0;
-    console.log("working");
+    
   } else {
     timeValidatePassFlag = false;
-    console.log("fail");
+ 
   }
 
   let time2 = timeInput.value.slice(
@@ -571,7 +544,7 @@ function timeValidate() {
 
   if (timeInput.length > 10) {
     timeValidatePassFlag = false;
-    console.log("fail");
+
     return;
   }
 
@@ -581,40 +554,32 @@ function timeValidate() {
     !containsSpecialCharacters(time2) &&
     !time2.includes(" ")
   ) {
-    console.log("working");
+
   } else {
     timeValidatePassFlag = false;
-    console.log("fail");
+   
   }
   if (Number(time1Double) > 12 || Number(time1) > 9 || Number(time2) > 59) {
     timeValidatePassFlag = false;
   }
   if (time2Format === "a" || time2Format === "p") timeNull0Decrement++;
   let ampm = timeInput.value.slice(6 - timeNull0Decrement);
-  console.log(time.slice(0, 5 - timeNull0Decrement));
+
   if (
     ampm.toLowerCase().includes("am") ||
     ampm.toLowerCase().includes("a.m.")
   ) {
-    console.log("working");
+  
   } else if (
     ampm.toLowerCase().includes("pm") ||
     ampm.toLowerCase().includes("p.m.")
   ) {
-    console.log("working");
+   
   } else {
     timeValidatePassFlag = false;
-    console.log("fail");
+  
   }
-  console.log(
-    "time1:",
-    Number(time1),
-    "time1Double",
-    Number(time1Double),
-    "time2:",
-    Number(time2),
-    validHours
-  );
+
   if (timeValidatePassFlag === true) {
     if (
       ampm.toLowerCase().includes("pm") ||
@@ -639,24 +604,24 @@ function timeValidate() {
               (Number(time1) === Number(validHours[1]) ||
                 Number(time1Double) === Number(validHours[1]))
             ) {
-              console.log("valid hours failure");
+             
               timeErrorFlag2 = true;
             } else {
-              console.log("valid hours success");
+           
             }
           } else {
-            console.log("valid hours failure");
+           
             timeErrorFlag2 = true;
           }
         } else {
-          console.log("valid hours success");
+      
         }
       } else {
-        console.log("valid hours failure");
+      
         timeErrorFlag2 = true;
       }
     } else {
-      console.log("valid hours failure");
+     
       timeErrorFlag2 = true;
     }
   }
@@ -666,7 +631,7 @@ function monthValidate() {
   if (dateInput.length > 12) return;
 
   let date = dateInput.value.slice(0, 2);
-  let dateNull0 = dateInput.value.slice(0, 1); // 0 not in format e.g 2/3/2022 instead of 02/3/2022
+  let dateNull0 = dateInput.value.slice(0, 1);
   let dateNull0Format = dateInput.value.slice(1, 2);
   let dateFormat = dateInput.value.slice(2, 3);
 
@@ -677,7 +642,7 @@ function monthValidate() {
     dateFormat === "/" &&
     Number(date) <= 12
   ) {
-    console.log("success");
+   
     return date;
   } else if (
     containsNumbers(dateNull0) &&
@@ -687,10 +652,10 @@ function monthValidate() {
     Number(dateNull0) <= 9
   ) {
     dateNull0Decrement = 1;
-    console.log("success");
+ 
     return date;
   } else {
-    console.log("fail");
+ 
   }
 }
 function dayValidate() {
@@ -720,7 +685,7 @@ function dayValidate() {
     dateFormat1 === "/" &&
     Number(date1) <= 31
   ) {
-    console.log("success");
+ 
     return date1;
   } else if (
     containsNumbers(date2) &&
@@ -731,10 +696,10 @@ function dayValidate() {
   ) {
     if (dateNull0Decrement === 0) dateNull0Decrement = -1;
     else if (dateNull0Decrement === 1) dateNull0Decrement = 0;
-    console.log("success");
+  
     return date2;
   } else {
-    console.log("fail");
+  
   }
 }
 
@@ -753,12 +718,12 @@ function yearValidate() {
       !containsSpecialCharacters(date) &&
       date.length === 4)
   ) {
-    console.log("success");
+
     dateNull0Decrement = 0;
     return date;
   } else {
     dateNull0Decrement = 0;
-    console.log("fail");
+
   }
 }
 

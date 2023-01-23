@@ -5,7 +5,7 @@ const emptyErrors = document.querySelectorAll(".empty-error");
 const addressInput = document.querySelector(".address input");
 const ordersForm = document.querySelector(".orders-form");
 const table = document.querySelector("tbody");
-console.log(table)
+
 parentNames.forEach((parentName) => {
   const input = parentName.children[1];
   const inputError = parentName.children[2].children[0];
@@ -14,16 +14,16 @@ parentNames.forEach((parentName) => {
     emptyErrors.forEach((emptyError) => {
       const emptyInput = emptyError.parentElement.previousElementSibling;
 
-      console.log(emptyInput.value.length, emptyInput.value);
+      
       if (emptyInput.value.length > 0) {
         emptyError.classList.remove("show-error");
       }
     });
     if (containsSpecialCharacters(input.value)) {
-      console.log("includes special characters");
+      
       inputError.classList.add("temporary");
     } else if (containsNumbers(input.value)) {
-      console.log("includes numbers");
+      
 
       inputError.classList.add("temporary");
     } else {
@@ -36,7 +36,7 @@ parentNames.forEach((parentName) => {
 
 addressInput.addEventListener("input", function () {
   if (addressInput.value.length > 0) {
-    console.log("working");
+    
 
     addressInput.nextElementSibling.children[0].classList.remove("show-error");
   }

@@ -32,7 +32,7 @@ buttons.forEach((button) => {
 
   function nextSlide() {
     click++;
-    console.log(button);
+
     offset = button.dataset.sliderButton === "next" ? 1 : -1;
     slides = button.closest("[data-slider]").querySelector("[data-slides]");
 
@@ -66,7 +66,7 @@ buttons.forEach((button) => {
         currentDate - startDate <= topMargin &&
         currentDate - startDate >= bottomMargin
       ) {
-        // it was a second
+     
     
         button.addEventListener("click", nextSlide);
         clearInterval();

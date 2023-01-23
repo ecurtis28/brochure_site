@@ -89,19 +89,19 @@
         />
       </div>
       <div class="reservation-description-container">
-        <p class="reservation-description">
+        <p class="reservation-description-paragraph">
           Due to periods of high guest attendance, reservations are recommended.
         </p>
-        <p class="reservation-description">
+        <p class="reservation-description-paragraph">
           Reservations are held for 30 minutes before the next guest on the
           waitlist is prioritized.
         </p>
-        <p class="reservation-description">
+        <p class="reservation-description-paragraph">
           To reserve a table or room. Either enter in your reservation
           information below inside the form; or refer to the phone number in the
           description.
         </p>
-        <p class="reservation-description">
+        <p class="reservation-description-paragraph">
           <a href="tel:401-739-2317">Reservation Line: 401-739-2317</a>
         </p>
       </div>
@@ -119,7 +119,7 @@
           <div class="name-container">
             <div class="name form-container">
               <label for="fname">First Name</label>
-              <input type="text" id="fname" name="fname" placeholder="Thomas" />
+              <input type="text" id="fname" name="fname" placeholder="Thomas" autocomplete="off" />
               <div class="input-errors">
                 <p class="input-error letter-error">
                   This field can only have letters.
@@ -135,7 +135,7 @@
                 type="text"
                 id="lname"
                 name="lname"
-                placeholder="Anderson"
+                placeholder="Anderson" autocomplete="off"
               />
               <div class="input-errors">
                 <p class="input-error letter-error">
@@ -150,7 +150,7 @@
           <div class="secondary-container">
             <div class="guest-container form-container">
               <label for="guests">Number of Guests</label>
-              <input type="text" id="guests" name="guests" placeholder="3" />
+              <input type="text" id="guests" name="guests" placeholder="3"  autocomplete="off"/>
               <div class="input-errors">
                 <p class="input-error empty-error">
                   This field must not be empty.
@@ -168,14 +168,14 @@
             <div class="phone-container form-container">
               <label for="phone"
                 >Phone Number
-                <span class="optional-input opt_1">* Optional</span></label
+                <span class="optional-input opt-1">* Optional</span></label
               >
               <input
                 type="tel"
                 id="phone"
                 name="phone"
                 maxlength="12"
-                placeholder="401-368-2410"
+                placeholder="401-368-2410" autocomplete="off"
               />
               <div class="input-errors">
                 <p class="input-error">This field can only contain numbers.</p>
@@ -187,13 +187,13 @@
             <div class="email-container form-container">
               <label for="email"
                 >Email
-                <span class="optional-input opt_2">* Optional</span></label
+                <span class="optional-input opt-2">* Optional</span></label
               >
               <input
                 type="email"
                 id="email"
                 name="email"
-                placeholder="email@example.com"
+                placeholder="email@example.com" autocomplete="off"
               />
               <div class="input-errors">
                 <p class="input-error email-format-error">
@@ -205,7 +205,7 @@
           <div class="time-date-container">
             <div class="date-container form-container">
               <label for="date">Reservation Date </label>
-              <input type="text" id="date" name="date" />
+              <input type="text" id="date" name="date" autocomplete="off" />
               <div class="input-errors">
                 <p class="input-error date-format-error">
                   This field must have a date format.
@@ -227,7 +227,7 @@
                 type="text"
                 id="time"
                 name="time"
-                placeholder="4:40 p.m."
+                placeholder="4:40 p.m." autocomplete="off"
               />
               <div class="input-errors">
                 <p class="input-error time-format-error">

@@ -1,7 +1,6 @@
 const hours = document.querySelector(".footer-hours");
 const pm = document.querySelector(".pm")
 const today = document.querySelector(".today");
-console.log(hours);
 const date = new Date();
 let day = date.getDay();
 switch (day) {

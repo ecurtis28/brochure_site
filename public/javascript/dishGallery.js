@@ -8,10 +8,10 @@ images.forEach((image) => {
 
   let dishGalleryBackdropWidth = dishGalleryTitleObject.width + 21;
   dishGalleryBackdropWidth = dishGalleryBackdropWidth.toString() + "px";
-  // console.log(dishGalleryBackdropElement.style.width);
+
   dishGalleryBackdropElement.style.width = dishGalleryBackdropWidth;
   image.addEventListener("mouseenter", () => {
-    console.log("mouse entering image");
+
 
     const dishGalleryTitle = image.children[1].classList;
 
@@ -23,7 +23,7 @@ images.forEach((image) => {
     dishGalleryBackdrop.remove("hide-fog");
   });
   image.addEventListener("mouseleave", () => {
-    console.log("mouse leaving image");
+  
 
     const dishGalleryTitle = image.children[1].classList;
     const dishGalleryBackdrop = image.children[2].classList;
