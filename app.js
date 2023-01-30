@@ -37,6 +37,6 @@ app.post("/orders", function (req, res) {
 app.post("/reservations", function (req, res) {
   res.redirect("/reservations_success");
 });
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("Server started on port 3000");
 });
