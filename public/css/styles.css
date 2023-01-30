@@ -2453,49 +2453,51 @@ input:focus {
   /* Header */
   /***********************/
   .header {
-    height: 11rem;
+    height: 16rem;
   }
   .logo-title {
-    font-size: 4.1rem;
+    font-size: 5rem;
   }
   .logo-link {
     width: 27.2rem;
 
-    margin-left: 1.8rem;
+    margin-left: 2.2rem;
     /* transform: translate(8rem, -2rem) */
   }
   /***********************/
   /* Navigation */
   /***********************/
   .header > .main-nav {
-    font-size: 2rem;
-    margin-bottom: 0.4rem;
+    font-size: 2.7rem;
+    margin-bottom: 0.7rem;
     margin-right: 6.5rem;
   }
   .main-nav-list {
-    gap: 5.4rem;
+    gap: 6rem;
     margin-right: 0;
   }
   .link-embellishment {
-    transform: translateY(2.2rem);
-    width: 6.2rem;
+    transform: translateY(3.1rem);
+    width: 9.1rem;
   }
+
   /***********************/
   /* Slider */
   /***********************/
 
   #picture-album {
-    min-height: 40rem;
   }
   .slider {
-    height: 110rem;
+    height: 120rem;
   }
-
+  .slide > .img-2 {
+    object-position: 20% 80%;
+  }
   .slider-button {
-    font-size: 4.8rem;
-    width: 5rem;
-    height: 6rem;
-    top: 45%;
+    font-size: 6.8rem;
+    width: 7.5rem;
+    height: 8.5rem;
+    top: 45.9%;
   }
   .prev {
     margin-left: 1rem;
@@ -2504,9 +2506,9 @@ input:focus {
     margin-right: 1rem;
   }
   .slider-button > span {
-    -webkit-transform: translateY(-0.5rem);
-    -ms-transform: translateY(-0.5rem);
-    transform: translateY(-0.5rem);
+    -webkit-transform: translateY(-0.8rem);
+    -ms-transform: translateY(-0.8rem);
+    transform: translateY(-0.8rem);
   }
 
   /***********************/
@@ -2514,75 +2516,75 @@ input:focus {
   /***********************/
 
   .about-container {
-    height: 82rem;
+    height: 105rem;
   }
   .description-container {
     height: 20rem;
-    margin-bottom: 9rem;
-    width: 98rem;
+    width: 110rem;
+    margin-bottom: 14rem;
   }
   .description-container h1 {
-    margin-bottom: 0.1rem;
-    font-size: 8.9rem;
+    margin-bottom: 0rem;
+    font-size: 11.5rem;
   }
   .description-container > .embellishment {
-    width: 14.1rem;
-    margin-bottom: 0.2rem;
+    width: 17.2rem;
+    margin-bottom: 1.4rem;
   }
   .description-container > p {
-    font-size: 2.5rem;
+    font-size: 3.4rem;
   }
 
   /***********************/
   /* Z-Layout */
   /***********************/
-
+  .z-layout-section {
+    margin-bottom: 1.2rem;
+  }
   .z-layout-top,
   .z-layout-bottom {
-    height: 80rem;
+    height: 90rem;
   }
   .z-layout-top h2,
   .z-layout-bottom h2 {
-    font-size: 3.3rem;
+    font-size: 4.4rem;
   }
 
   .z-layout-top p,
   .z-layout-bottom p {
-    font-size: 2.1rem;
+    font-size: 2.7rem;
   }
   .z-layout-bottom h3 {
-    font-size: 2.6rem;
+    font-size: 3.2rem;
   }
   .z-layout-image {
-    height: 80rem;
+    height: 90rem;
   }
   .z-layout-inner-description {
-    gap: 3.1rem;
+    gap: 3.7rem;
   }
 
   .inner-description-title {
     margin-bottom: 0.3rem;
   }
-  .inner-description-paragraph {
-    text-align: center;
-  }
   .z-layout-section .button {
-    width: 23.7rem;
-    height: 7.4rem;
-    font-size: 1.8rem;
-    letter-spacing: 0.3rem;
+    width: 28rem;
+    height: 8.7rem;
+    font-size: 2.3rem;
+    letter-spacing: 0.5rem;
     border-width: 3px;
   }
-  .z-layout-section {
-    margin-bottom: 0.8rem;
-  }
   .z-layout-top-description .button {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   .z-layout-bottom-description .button {
-    margin-top: 2.8rem;
+    margin-top: 2.2rem;
   }
   .z-layout-bottom-description .z-layout-inner-description {
+    gap: 3.2rem;
+  }
+  .z-layout-bottom .inner-description-paragraph,
+  .inner-description-subtitle {
     width: 65rem;
     text-align: center;
   }
@@ -2592,45 +2594,40 @@ input:focus {
   /***********************/
 
   .footer {
-    margin-top: 1.6rem;
-
-    min-height: 35.4rem;
-    height: 35.4rem;
+    height: 40.5rem;
+    margin-top: 1.2rem;
+    width: 100%;
   }
   .footer-container {
-    margin: auto;
-    transform: translateX(-4.7%);
-    width: 80rem;
-  }
-  .footer-icon-container {
-    width: 80rem;
+    width: 100%;
   }
   .description-flex {
     margin-top: 4.2rem;
-    gap: 4.8rem;
+    gap: 6rem;
   }
 
   .description-flex-one {
-    margin-right: 9.7rem;
+    margin-right: 10.5rem;
+    margin-left: -11rem;
   }
   .description-flex-two {
-    margin-left: 2rem;
+    transform: translatex(-4rem);
   }
   .footer-description-container > h3 {
-    font-size: 2.2rem;
+    font-size: 2.7rem;
     width: max-content;
-    margin-bottom: 3.2rem;
+    margin-bottom: 5.1rem;
   }
   .footer-description-container > a {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     border-bottom-width: 2px !important;
-    padding-bottom: 0.3rem !important;
+    padding-bottom: 0.6rem;
   }
   .footer-description-container > a:last-child {
     margin-top: 0.5rem;
   }
   .description-flex-two .footer-description-container:last-child {
-    transform: translateY(2rem);
+    transform: translateY(2.1rem);
   }
 
   .single-description {
@@ -2643,191 +2640,207 @@ input:focus {
     border-bottom-width: 2px !important;
   }
   .single-description > a {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     border-bottom-width: 2px !important;
-    padding-bottom: 0.3rem !important;
+    padding-bottom: 0.8rem !important;
   }
   .single-description > a:first-child {
     margin-bottom: 0.5rem !important;
   }
   .footer-icon {
-    font-size: 4rem;
-    letter-spacing: 0.3rem;
+    font-size: 4.4rem;
+    letter-spacing: 0.4rem;
   }
   .footer-embellishment {
-    width: 38.2rem;
+    width: 44rem;
+  }
+  .footer-icon-container {
+    margin-top: 0;
   }
 
   /* --------Contact Us Page---------- */
   .contact-container {
-    height: 108.3rem;
-    margin-bottom: 5rem;
-    margin-top: 5rem;
+    height: 121.3rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
   }
   .contact-description-container {
-    width: 136.5rem;
-    height: 112rem;
+    width: 140.5rem;
+    height: 120rem;
   }
   .contact-header {
-    font-size: 3.9rem;
-    margin-bottom: 2.8rem;
+    font-size: 4.7rem;
+    margin-bottom: 3rem;
   }
   .contact-description {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1.8rem;
   }
   .contact-description-phone {
-    font-size: 2.1rem;
+    font-size: 2.7rem;
     margin-bottom: 1.8rem;
   }
 
   .contact-description-email {
-    font-size: 2.1rem;
-    margin-bottom: 1rem;
+    font-size: 2.7rem;
+    margin-bottom: 1.2rem;
   }
   .contact-description-small {
-    font-size: 1.8rem;
+    font-size: 2.3rem;
   }
 
   /* --------Menu Page---------- */
   .menu-title {
-    font-size: 7.6rem;
-    letter-spacing: 2rem;
-    margin-bottom: 11.5rem;
+    font-size: 8.9rem;
+    letter-spacing: 2.8rem;
+    margin-bottom: 14.5rem;
   }
   .menu-title-lines {
     transform: translateY(-0.9rem);
-    font-size: 7.6rem;
+    font-size: 8.9rem;
   }
   .menu-title-lines:first-child {
-    margin-right: -1rem;
+    margin-right: -1.4rem;
   }
   .menu-title-lines:last-child {
-    margin-left: -1rem;
+    margin-left: -1.4rem;
   }
   .course-title:first-child {
+    font-size: 9.5rem;
   }
   .course-title {
-    font-size: 8rem !important;
-    margin-bottom: 6.5rem !important;
+    margin-bottom: 7.2rem !important;
   }
-
   .dish-description {
-    margin-bottom: 4rem;
+    margin-bottom: 4.4rem;
+  }
+  .tilde {
+    transform: translateY(0.2rem);
   }
   .dish-description .title {
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
   }
   .dish-description .description-text {
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem;
+    font-size: 2.3rem;
+    margin-bottom: 0.7rem;
   }
   .dish-description .price {
-    font-size: 1.8rem;
+    font-size: 2.3rem;
   }
   .menu {
-    height: 266rem;
+    height: 296rem;
   }
   .menu-container {
     height: 100%;
-    margin-top: 3.3rem;
-    margin-bottom: 1rem;
+    margin-top: 9rem;
   }
   .course-container {
-    margin-bottom: 3.6rem;
+    margin-bottom: 3.3rem;
   }
 
   /* --------Orders Page---------- */
   .img-container {
-    width: 108rem;
+    width: 124rem;
+    margin-bottom: 3.8rem;
   }
   .reservation-img {
-    width: 100%;
-    margin-bottom: 1.8rem;
+    width: 124rem;
   }
   .orders-gallery {
     margin-top: 2.5rem;
   }
   .orders-title {
-    font-size: 9.2rem;
+    font-size: 10.5rem;
   }
   .orders-title-container .embellishment {
-    width: 13.1rem;
+    width: 15rem;
     transform: translateY(-1rem);
   }
   .orders-gallery-container {
-    gap: 5.3rem;
+    gap: 3.9rem;
   }
   .orders-title {
     margin-top: 7rem;
   }
   .orders-title-container {
-    margin-bottom: 6rem;
+    margin-bottom: 7.8rem;
   }
   .orders-item-title {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
 
-    transform: translateX(-0.2rem);
-    margin-bottom: 2.8rem !important;
+    margin-bottom: 1.8rem !important;
   }
   .orders-gallery-photo {
-    width: 23.8rem;
-    border-width: 5px;
+    width: 32.4rem;
+    border-width: 6px;
   }
   .orders-gallery-preview {
     width: 95rem;
     height: auto;
   }
+  .orders-gallery-container {
+    flex-wrap: wrap;
+  }
+
+  .orders-gallery-photo-container:nth-child(1),
+  .orders-gallery-photo-container:nth-child(2),
+  .orders-gallery-photo-container:nth-child(3) {
+    transform: translateX(18.6rem);
+  }
+  .orders-gallery-photo-container:last-child {
+    transform: translate(19rem, 7rem);
+  }
+  .orders-gallery-photo-container:nth-child(4) {
+    transform: translate(-75rem, 63.6rem);
+  }
   .orders-gallery-photo-container .price {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 1.4rem 0;
   }
   .orders-gallery-photo-container .shipping-included {
-    font-size: 1.6rem;
-    margin-bottom: 2.3rem;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
     margin-top: 0.6rem;
   }
   .orders-item-description-button {
-    margin-top: 0.4rem;
-    transform: scale(1.33);
-  }
-  .orders-item-description-container {
-    margin-top: 1rem;
+    margin-top: 1.9rem;
+    transform: scale(1.65);
   }
   .orders-cart-container {
-    margin-top: 2.6rem;
+    margin-top: 11.6rem;
     transform: translateX(-0.2rem);
   }
   .orders-form-container {
     transform: translateX(-0.2rem);
   }
   .orders-cart-title {
-    font-size: 4rem;
+    font-size: 4.7rem;
   }
   .orders-cart-description {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     margin-top: 2.1rem;
   }
   .orders-cart {
-    width: 93rem;
-    border-width: 4px !important;
-    margin-top: 0.6rem;
+    width: 110rem;
+    border-width: 5px !important;
+    margin-top: 1rem;
   }
   .table-headers-row {
-    height: 2.9rem !important;
+    height: 3.2rem !important;
+   
   }
   .orders-cart tr {
     border-bottom-width: 3px;
   }
   .table-headers {
-    font-size: 1.8rem !important;
+    font-size: 2.2rem !important;
   }
   .table-row {
-    height: 2.6rem !important;
+    height: 3.8rem !important;
   }
   .table-row .table-data {
-    font-size: 1.8rem !important;
+    font-size: 2rem !important;
     width: 26.6rem;
     text-align: center;
   }
@@ -2842,65 +2855,67 @@ input:focus {
   }
 
   .table-row .add-amount {
-    transform: translateX(-10.5rem);
+    transform: translateX(-19rem);
   }
   .table-row .subtract-amount {
-    transform: translateX(-9.7rem);
+    transform: translateX(-18.3rem);
   }
   .table-row .fa-angle-down {
-    transform: translateY(-0.2rem);
-    font-size: 1.3rem;
+    transform: translateY(-0.6rem);
+    font-size: 1.6rem;
   }
   .table-row .fa-angle-up {
-    transform: translateY(-0.2rem);
-    font-size: 1.3rem;
+    transform: translateY(-0.6rem);
+    font-size: 1.6rem;
   }
   .table-row .table-button {
-    transform: translate(-0.6rem, -0.2rem);
+    transform: translate(-1rem, -0.6rem);
   }
   .table-row .fa-x {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
+
+  
   .orders-form-container .icon-container {
-    width: 7.8rem;
-    height: 2.8rem;
+    width: 10.8rem;
+    height: 3.6rem;
     font-size: 1.8rem;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
   .icon {
-    transform: translateY(0rem);
-    font-size: 1.3rem;
+    transform: translateY(-0.1rem);
   }
   .on {
-    width: 128rem !important;
+    width: 142rem !important;
   }
   .orders-form-container .active {
-    width: 165rem;
-    height: 48rem;
-    margin-top: -6rem;
-    margin-bottom: 16rem;
+    width: 128rem;
+    height: 56rem;
+    margin-top: -4.9rem;
+    margin-bottom: 12.5rem;
+    
   }
   .name-container {
-    gap: 5.1rem;
-    margin-top: 4.4rem;
+    gap: 6.7rem;
+    margin-top: 5rem;
   }
   .secondary-container {
-    margin-top: 4.4rem;
+    margin-top: 5rem;
   }
 
   .button-container button {
     margin-top: 3rem;
-    height: 5rem;
-    font-size: 2.1rem;
-    width: 12.8rem;
+    height: 5.4rem;
+    font-size: 2.7rem;
+    width: 14.6rem;
     border: 2px solid #010101;
   }
   .form-container > input {
-    border: 3px solid rgb(142, 86, 86, 0.5);
-    height: 3.5rem;
-    width: 40.8rem;
-    font-size: 2rem;
+    border: 4px solid rgb(142, 86, 86, 0.5);
+    height: 4.2rem;
+    width: 46.5rem;
+    font-size: 2.4rem;
     padding: 0 0.3rem;
   }
 
@@ -2911,8 +2926,8 @@ input:focus {
 
   .reservation-form > div > div > label,
   .orders-form > div > div > label {
-    font-size: 2.1rem;
-
+    padding-left: 0.2rem;
+    font-size: 2.4rem;
     margin-bottom: 0.2rem;
   }
 
@@ -2920,7 +2935,7 @@ input:focus {
     width: 200rem;
   }
   .input-error {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
   }
   /* --------Reservations Page---------- */
   .reservation-description {
@@ -2931,7 +2946,7 @@ input:focus {
     font-size: 12.5rem;
   }
   .reservations-title-container {
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
   }
   .reservation-description .embellishment {
     width: 18.5rem;
@@ -2971,12 +2986,8 @@ input:focus {
   .opt-2 {
     transform: translate(39.7rem, 0rem);
   }
-
   /* --------Success Pages---------- */
 
-  .orders-title-container {
-    margin-bottom: 8rem;
-  }
   .orders-success-container {
     height: 90rem;
   }
@@ -2984,26 +2995,10 @@ input:focus {
     font-size: 5.5rem !important;
     transform: translateY(-4.5rem);
   }
-.orders-title{
-  font-size: 12.5rem;
-  margin-bottom: 1.2rem;
-}
-.orders-title-container > .embellishment{
-  width: 18.5rem
-}
+
   .orders-success-redirect {
     margin-top: 6.5rem;
     transform: translateY(-4.5rem);
-  }
-  .reservations-title-container {
-    gap: 0.7rem;
-    margin-top: 10.8rem;
-  }
-  .reservations-title-container > .embellishment {
-    width: 18.4rem;
-  }
-  .orders-item-description-button {
-    transform: scale(1.85);
   }
 }
 /* Current Desktop Size in Linux Workstation 1449px */
