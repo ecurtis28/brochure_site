@@ -2,6 +2,8 @@ const { response } = require("express");
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+
+const port = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -37,6 +39,10 @@ app.post("/orders", function (req, res) {
 app.post("/reservations", function (req, res) {
   res.redirect("/reservations_success");
 });
-app.listen(process.env.PORT || 3000, function () {
-  console.log("Server started on port 3000");
+app.listen(port , function () {
+ if(port === 3000) {console.log("Server started on port 3000")}
+ else {
+   console.log("Port is successfully remotely hosted")
+ }
+
 });
