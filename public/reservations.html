@@ -13,6 +13,7 @@
     ></script>
     <script src="javascript/onLoad.js" defer></script>
     <script src="javascript/embellishment.js" defer></script>
+    <script src="javascript/mobileHeader.js" defer></script>
     <script src="javascript/revealForm.js" defer></script>
     <script src="javascript/footerDescription.js" defer></script>
     <script src="javascript/currentHours.js" defer></script>
@@ -20,6 +21,7 @@
   </head>
   <body>
     <header class="header hide-ele">
+      <button class="header-mobile"><i class="fa-solid fa-bars"></i></button>
       <a class="logo-link" href="./">
         <h1 class="logo-title"><span class="c-title">C</span>attedrale</h1></a
       >
@@ -69,6 +71,7 @@
         </ul>
       </nav>
     </header>
+
     <!-- <div class="reservation-img-container">
           <img src="/images/reservation_img.png" alt="Picture of Italian Cuisine" class="reservation-img">
         </div> -->
@@ -119,7 +122,13 @@
           <div class="name-container">
             <div class="name form-container">
               <label for="fname">First Name</label>
-              <input type="text" id="fname" name="fname" placeholder="Thomas" autocomplete="off" />
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="Thomas"
+                autocomplete="off"
+              />
               <div class="input-errors">
                 <p class="input-error letter-error">
                   This field can only have letters.
@@ -135,7 +144,8 @@
                 type="text"
                 id="lname"
                 name="lname"
-                placeholder="Anderson" autocomplete="off"
+                placeholder="Anderson"
+                autocomplete="off"
               />
               <div class="input-errors">
                 <p class="input-error letter-error">
@@ -150,7 +160,13 @@
           <div class="secondary-container">
             <div class="guest-container form-container">
               <label for="guests">Number of Guests</label>
-              <input type="text" id="guests" name="guests" placeholder="3"  autocomplete="off"/>
+              <input
+                type="text"
+                id="guests"
+                name="guests"
+                placeholder="3"
+                autocomplete="off"
+              />
               <div class="input-errors">
                 <p class="input-error empty-error">
                   This field must not be empty.
@@ -175,7 +191,8 @@
                 id="phone"
                 name="phone"
                 maxlength="12"
-                placeholder="401-368-2410" autocomplete="off"
+                placeholder="401-368-2410"
+                autocomplete="off"
               />
               <div class="input-errors">
                 <p class="input-error">This field can only contain numbers.</p>
@@ -193,7 +210,8 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="email@example.com" autocomplete="off"
+                placeholder="email@example.com"
+                autocomplete="off"
               />
               <div class="input-errors">
                 <p class="input-error email-format-error">
@@ -227,7 +245,8 @@
                 type="text"
                 id="time"
                 name="time"
-                placeholder="4:40 p.m." autocomplete="off"
+                placeholder="4:40 p.m."
+                autocomplete="off"
               />
               <div class="input-errors">
                 <p class="input-error time-format-error">

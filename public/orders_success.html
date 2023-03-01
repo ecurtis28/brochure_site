@@ -13,6 +13,7 @@
    
 
     <script src="javascript/embellishment.js" defer></script>
+    <script src="javascript/mobileHeader.js" defer></script>
     <script src="javascript/currentHours.js" defer></script>
     <script src="javascript/footerDescription.js" defer></script>
     <script src="javascript/onSuccess.js" defer></script>
@@ -21,7 +22,8 @@
     <title>Cattedrale</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header hide-ele">
+      <button class="header-mobile"><i class="fa-solid fa-bars"></i></button>
       <a class="logo-link" href="./">
         <h1 class="logo-title"><span class="c-title">C</span>attedrale</h1></a
       >
@@ -71,6 +73,7 @@
         </ul>
       </nav>
     </header>
+
     <div class="img-container">
       <img
         src="/images/brochure_images/orders_img_850.jpg"

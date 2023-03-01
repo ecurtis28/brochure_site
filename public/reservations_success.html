@@ -13,12 +13,14 @@
     ></script>
 
     <script src="javascript/embellishment.js" defer></script>
+    <script src="javascript/mobileHeader.js" defer></script>
     <script src="javascript/footerDescription.js" defer></script>
     <script src="javascript/currentHours.js" defer></script>
     <script src="javascript/onSuccess.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header hide-ele">
+      <button class="header-mobile"><i class="fa-solid fa-bars"></i></button>
       <a class="logo-link" href="./">
         <h1 class="logo-title"><span class="c-title">C</span>attedrale</h1></a
       >
@@ -68,6 +70,7 @@
         </ul>
       </nav>
     </header>
+
     <!-- <div class="reservation-img-container">
           <img src="/images/reservation_img.png" alt="Picture of Italian Cuisine" class="reservation-img">
         </div> -->

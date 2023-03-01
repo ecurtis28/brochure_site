@@ -16,15 +16,15 @@
     <script src="javascript/ordersGallery.js" defer></script>
     <script src="javascript/revealForm.js" defer></script>
     <script src="javascript/embellishment.js" defer></script>
+    <script src="javascript/mobileHeader.js" defer></script>
     <script src="javascript/currentHours.js" defer></script>
     <script src="javascript/footerDescription.js" defer></script>
-
-
 
     <title>Cattedrale</title>
   </head>
   <body>
     <header class="header hide-ele">
+      <button class="header-mobile"><i class="fa-solid fa-bars"></i></button>
       <a class="logo-link" href="./">
         <h1 class="logo-title"><span class="c-title">C</span>attedrale</h1></a
       >
@@ -74,6 +74,7 @@
         </ul>
       </nav>
     </header>
+
     <div class="img-container hide-ele">
       <img
         src="/images/brochure_images/orders_img_850.jpg"
@@ -218,7 +219,13 @@
         <div class="name-container">
           <div class="name form-container">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" placeholder="Thomas" autocomplete="off" />
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Thomas"
+              autocomplete="off"
+            />
             <div class="input-errors">
               <p class="input-error letter-error">
                 This field can only have letters.
@@ -230,7 +237,13 @@
           </div>
           <div class="name form-container">
             <label for="fname">Last Name</label>
-            <input type="text" id="lname" name="lname" placeholder="Anderson" autocomplete="off" />
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Anderson"
+              autocomplete="off"
+            />
             <div class="input-errors">
               <p class="input-error letter-error">
                 This field can only have letters.
@@ -248,7 +261,8 @@
               type="text"
               id="address"
               name="address"
-              placeholder="256 Evergreen Ave. Barberton, OH" autocomplete="off"
+              placeholder="256 Evergreen Ave. Barberton, OH"
+              autocomplete="off"
             />
             <div class="input-errors">
               <p class="input-error empty-error">
