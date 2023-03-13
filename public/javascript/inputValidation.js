@@ -67,13 +67,10 @@ parentNames.forEach((parentName) => {
 phone.addEventListener("input", function () {
   const inputError = phone.nextElementSibling.children[0];
   let numberLength = phone.value.replace(/\D/g, "").length;
-
-  if (containsSpecialCharacters(phone.value) || containsLetters(phone.value)) {
-    inputError.classList.add("show-error");
-  } else {
-    if (inputError.classList[1] === "show-error")
-      inputError.classList.remove("show-error");
+  if (!containsSpecialCharacters(phone.value) && !containsLetters(phone.value)){
+    inputError.classList.remove('show-error')
   }
+  
 
   if (numberLength === 0) {
     flag1 = true;
@@ -129,6 +126,8 @@ phoneErrorInput.addEventListener("input", () => {
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
+
+  const phoneInputError = phone.nextElementSibling.children[0];
   const numberLength = phone.value.replace(/\D/g, "").length;
   const phoneError = document.querySelector(".phone-error-format");
   const reservationForm = document.querySelector(".reservation-form");
@@ -242,6 +241,14 @@ submit.addEventListener("click", (e) => {
     timeErrorFlag2 = false;
   }
 
+
+
+  if (containsSpecialCharacters(phone.value) || containsLetters(phone.value)) {
+    phoneInputError.classList.add("show-error");
+  } else {
+    if (phoneInputError.classList[1] === "show-error")
+      phoneInputError.classList.remove("show-error");
+  }
   inputErrors.forEach((inputError) => {
     const classList = inputError.classList;
 

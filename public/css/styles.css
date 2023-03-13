@@ -88,7 +88,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -225,6 +224,7 @@ header {
 }
 .logo-link {
   text-decoration: none;
+  z-index: 0;
 }
 /***********************/
 /* Navigation */
@@ -1203,7 +1203,15 @@ p.orders-description > a:visited {
   transition: height 0.55s ease-in-out;
   /* margin-bottom: 3rem; */
 }
-
+.orders-form > div > div > label,
+.reservation-form > div > div > label {
+  opacity: 0;
+}
+.reservation-form > div > div > .show-labels,
+.orders-form > div > div > .show-labels {
+  transition: opacity 1.4s ease-out;
+  opacity: 1;
+}
 ::-webkit-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
 
@@ -1392,6 +1400,7 @@ input:focus {
 }
 .input-error {
   display: none;
+  transform: translateY(0.1rem);
 }
 .input-errors {
   height: 1rem;
@@ -1556,6 +1565,7 @@ input:focus {
   -ms-flex-align: center;
   align-items: center;
 }
+
 .orders-cart {
   width: 70rem;
   height: auto;
@@ -2098,6 +2108,17 @@ input:focus {
   .table-row .subtract-amount {
     right: 23.1rem;
   }
+
+  .opt-1 {
+    -webkit-transform: translateX(10.7rem);
+    -ms-transform: translateX(10.7rem);
+    transform: translateX(10.7rem);
+  }
+  .opt-2 {
+    -webkit-transform: translateX(16.5rem);
+    -ms-transform: translateX(16.5rem);
+    transform: translateX(16.5rem);
+  }
 }
 
 @media (max-width: 65em) {
@@ -2274,6 +2295,17 @@ input:focus {
   .form-container > input {
     width: 21rem;
   }
+
+  .opt-1 {
+    -webkit-transform: translateX(6.6rem);
+    -ms-transform: translateX(6.6rem);
+    transform: translateX(6.6rem);
+  }
+  .opt-2 {
+    -webkit-transform: translateX(12.5rem);
+    -ms-transform: translateX(12.5rem);
+    transform: translateX(12.5rem);
+  }
 }
 @media (max-width: 53.75em) {
   .contact-description-container {
@@ -2331,6 +2363,12 @@ input:focus {
     width: 66rem;
   }
 }
+@media (max-width: 48.75em) {
+  .reservation-description-paragraph {
+    text-align: center;
+    width: 60rem;
+  }
+}
 @media (max-width: 47.5em) {
   .slider {
     height: 70rem;
@@ -2364,9 +2402,7 @@ input:focus {
   .dish-gallery-container {
     height: 50rem;
   }
-  .slider-button {
-    /* top: 46.6%; */
-  }
+
   .description-container {
     margin-bottom: 1.8rem;
   }
@@ -2399,11 +2435,11 @@ input:focus {
     width: 34rem;
   }
   .on {
-    width: 55rem;
+    width: 55.8rem;
   }
   .reservation-form,
   .orders-form {
-    width: 50.5rem;
+    width: 49rem;
   }
   /* .orders-form .active{
     height: 44rem;
@@ -2507,7 +2543,16 @@ input:focus {
   .slider-button {
     /* top: 46.1%; */
   }
+
+  .reservation-description-paragraph {
+    width: 50rem;
+  }
+
+  .img-container {
+    width: 51rem;
+  }
 }
+
 @media (max-width: 40.5em) {
   .header {
     transition: height 1s ease;
@@ -2531,9 +2576,18 @@ input:focus {
     position: relative;
     opacity: 1;
     left: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1.25s cubic-bezier(0.42, 0, 1, 0.94);
     pointer-events: auto;
   }
+  .reset-hide {
+    opacity: 0;
+    transition: none;
+  }
+  .reset-reveal {
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+
   .header-column {
     flex-direction: column;
     height: 40rem;
@@ -2541,9 +2595,9 @@ input:focus {
   }
   .freeze {
     position: absolute !important;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 1.6rem);
     left: 50%;
-    top: 5%;
+    top: 1.6rem;
   }
 
   .adjust {
@@ -2588,16 +2642,6 @@ input:focus {
 }
 
 @media (max-width: 39.375em) {
-  .on {
-    width: 45rem;
-  }
-  .reservation-form,
-  .orders-form {
-    width: 37.5rem;
-  }
-  /* .orders-form .active{
-    height: 44rem;
-  } */
   .table-row .add-amount {
     right: 18.5rem;
   }
@@ -2609,9 +2653,64 @@ input:focus {
   }
   .name-container {
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 3.3rem;
+    margin-top: 4rem;
   }
-  table.orders-cart {
+  .secondary-container {
+    margin-top: 4rem;
+  }
+  .tertiary-container {
+    flex-direction: column;
+  }
+  .time-date-container {
+    flex-direction: column;
+  }
+
+  .active .name-container {
+    gap: 3.3rem;
+    margin-top: 4rem;
+  }
+  .active.secondary-container {
+    margin-top: 4rem;
+  }
+
+  .active .tertiary-container {
+  }
+  .active .time-date-container {
+  }
+  .reservation-form.active {
+    height: 70rem;
+  }
+
+  .orders-form.active {
+    height: 39.7rem;
+  }
+  .on {
+    width: 42rem;
+  }
+  .reservation-form,
+  .orders-form {
+    width: 35.5rem;
+  }
+  .form-container > input {
+  }
+
+  .orders-form > div > div > label,
+  .reservation-form > div > div > label {
+    position: absolute;
+    transform: translateY(-1.7rem);
+    opacity: 0;
+  }
+  .reservation-form > div > div > .show-labels,
+  .orders-form > div > div > .show-labels {
+    transition: opacity 0.8s ease-in-out;
+
+    opacity: 1;
+  }
+
+  .active > div > div > label {
+    transform: translateY(-1.7rem);
+    position: absolute;
   }
 }
 @media (max-width: 39.1em) {
@@ -2626,9 +2725,7 @@ input:focus {
     max-width: 45rem;
     text-align: center;
   }
-  .img-container {
-    width: 51rem;
-  }
+
   .orders-gallery-preview {
     height: 68%;
   }
@@ -2642,6 +2739,20 @@ input:focus {
   }
 
   @media (max-width: 37.5em) {
+  }
+}
+@media (max-width: 36.31em) {
+  .table-data {
+    transform: translateY(0.1rem);
+  }
+  .icon-container {
+  }
+  .icon-container > i {
+    position: relative;
+    top: 0.1rem;
+  }
+  .reservation-description-paragraph {
+    width: 40rem;
   }
 }
 @media (max-width: 36.25em) {
@@ -2699,10 +2810,21 @@ input:focus {
     max-width: 42rem;
   }
 }
-@media (max-width: 33.75em) {
+@media (max-width: 33.81em) {
   .img-container {
     width: 43.5rem;
   }
+  .table-data {
+    margin-top: -0.1rem;
+
+    transform: translateY(0.1rem);
+  }
+  .icon-container > i {
+    position: relative;
+    top: 0;
+  }
+}
+@media (max-width: 33.75em) {
 }
 @media (max-width: 32.5em) {
   .z-layout-top,
@@ -2736,6 +2858,34 @@ input:focus {
   }
 }
 
+@media (max-width: 31.56em) {
+  table.orders-cart {
+    width: auto;
+  }
+  .table-headers-row {
+    width: 20rem;
+  }
+  .table-headers {
+    width: 8.5rem;
+  }
+  .orders-cart td {
+    width: 8.5rem;
+  }
+  .table-row .table-button {
+    top: 0rem;
+  }
+  .table-row .subtract-amount {
+    top: 0rem;
+    right: 8.6rem;
+  }
+  .table-row .add-amount {
+    top: 0rem;
+    right: 10.2rem;
+  }
+  .orders-cart .table-row {
+    height: 3.4rem;
+  }
+}
 @media (max-width: 31.25em) {
   .dish-gallery-container {
     height: 70em;
@@ -2765,10 +2915,54 @@ input:focus {
   .img-container {
     width: 39rem;
   }
+  .on {
+    width: 32rem;
+  }
+  .reservation-form,
+  .orders-form {
+    width: 25.5rem;
+  }
+  .form-container > input {
+    width: 17.8rem;
+  }
+  .opt-1 {
+    -webkit-transform: translateX(3.5rem);
+    -ms-transform: translateX(3.5rem);
+    transform: translateX(3.5rem);
+  }
+  .opt-2 {
+    -webkit-transform: translateX(9.4rem);
+    -ms-transform: translateX(9.4rem);
+    transform: translateX(9.4rem);
+  }
 }
+
+@media (max-width: 29.0625em) {
+  .icon-container > i {
+    height: 0.9rem;
+  }
+
+  .table-data {
+  }
+  .shift-table-data {
+  }
+}
+
 @media (max-width: 29em) {
+  .table-data {
+  }
   .img-container {
     width: 34rem;
+  }
+  .table-row button {
+    transform: translateY(0.1rem);
+  }
+}
+@media (max-width: 28.25em) {
+  .reservation-description-paragraph {
+    width: 30rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 @media (max-width: 28em) {
@@ -2836,11 +3030,16 @@ input:focus {
   .menu {
     height: 235rem;
   }
-  .course-title{
+  .course-title {
     text-align: center;
   }
 }
+@media (max-width: 26.3125em) {
+}
 @media (max-width: 26.25em) {
+  .table-row button {
+    transform: translateY(0) !important;
+  }
   .slider {
     height: 35.5rem;
   }
@@ -2858,6 +3057,12 @@ input:focus {
   }
   .img-container {
     width: 30rem;
+  }
+}
+
+@media (max-width: 27.25em) {
+  .orders-gallery-preview {
+    height: 47.5%;
   }
 }
 @media (max-width: 25.93em) {
@@ -2886,15 +3091,49 @@ input:focus {
     -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
   }
   .slider {
-    height: 10rem;
+    height: 31.5rem;
   }
   .slider-button {
     /* top: 42.3%; */
   }
 }
+@media (max-width: 24.0625em) {
+  .on {
+    width: 24rem;
+  }
+  .reservation-form,
+  .orders-form {
+    width: 18rem;
+  }
+  .form-container > input {
+    width: 11.6rem;
+  }
+
+  .opt-1 {
+    margin-left: -3rem;
+    -webkit-transform: translate(0.6rem, 5.4rem);
+    -ms-transform: translate(0.6rem, 5.4rem);
+    transform: translate(0.6rem, 5.4rem);
+  }
+  .opt-2 {
+    margin-left: -3rem;
+    -webkit-transform: translate(6.5rem, 5.4rem);
+    -ms-transform: translate(6.5rem, 5.4rem);
+    transform: translate(6.5rem, 5.4rem);
+  }
+  .input-error {
+    width: 12rem;
+  }
+}
 @media (max-width: 23.6em) {
   .dish-gallery-container {
     height: 190rem;
+  }
+  .img-container {
+    width: 27rem;
+  }
+  .reservations-title {
+    font-size: 6.2rem;
   }
 }
 @media (max-width: 22.5em) {
@@ -2922,20 +3161,25 @@ input:focus {
   }
   .contact-description-container {
   }
-  .dish-gallery-container {
-    height: 190rem;
-  }
+
   .course-container {
     max-width: 24rem;
   }
   .menu {
     height: 240.5rem;
   }
-}
-@media (max-width: 21.12em) {
   .dish-gallery-container {
     height: 170rem;
   }
+}
+@media (max-width: 21.875em) {
+  .reservation-description-paragraph {
+    width: 20rem;
+    line-height: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+}
+@media (max-width: 21.12em) {
   .contact-header {
     font-size: 2.8rem;
   }
