@@ -165,7 +165,6 @@ a:active {
 /* #f0eeee */
 /* #b9524b */
 
-
 /***********************/
 /* Header */
 /***********************/
@@ -611,7 +610,6 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex: 1;
 }
 .dish-gallery-bottom {
   height: 50%;
@@ -619,7 +617,6 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
- 
 }
 .dish-gallery-top-gap {
   background-color: #f0faf9;
@@ -650,7 +647,7 @@ nav {
 
 .dish-gallery-img-container {
   position: relative;
-
+  flex: 1;
   overflow: hidden;
 }
 .dish-gallery-img {
@@ -754,7 +751,6 @@ nav {
   background-color: #8e5656;
 }
 .footer-icon-container {
-
   margin-top: 0.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -896,7 +892,6 @@ nav {
   transform: translateX(-4rem);
 }
 .description-flex-two {
-
   -webkit-transform: translateX(4rem);
   -ms-transform: translateX(4rem);
   transform: translateX(4rem);
@@ -959,7 +954,6 @@ nav {
   transform: translateY(-0.6rem);
 }
 
-
 .dish-description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -974,7 +968,6 @@ nav {
   gap: 1.5rem;
   margin-bottom: 3rem;
   font-family: "EB Garamond Regular";
-
 }
 .dish-description:last-child {
   margin-bottom: 2.5rem;
@@ -1161,7 +1154,6 @@ p.orders-description > a:visited {
   -webkit-transition: height 0.55s ease-in-out;
   -o-transition: height 0.55s ease-in-out;
   transition: height 0.55s ease-in-out;
-  
 }
 .orders-form > div > div > label,
 .reservation-form > div > div > label {
@@ -1320,12 +1312,11 @@ input:focus {
 
 .button-container {
   margin-top: 3rem;
-  
+
   text-align: center;
 }
 .reservation-form button,
 .orders-form button {
- 
   cursor: pointer;
   color: #703f37;
   width: 6em;
@@ -1541,7 +1532,6 @@ input:focus {
   text-align: center;
 }
 .table-headers-row {
-
   border-top: none !important;
 }
 .table-data-row {
@@ -1745,7 +1735,6 @@ input:focus {
 
 .contact-description {
   font-size: 1.8rem;
-
 }
 .contact-description-small {
   font-size: 1.3rem;
@@ -1944,7 +1933,6 @@ input:focus {
     transform: translateX(-2.5rem);
   }
   .description-flex-two {
-
     -webkit-transform: translateX(2.5rem);
     -ms-transform: translateX(2.5rem);
     transform: translateX(2.5rem);
@@ -2309,7 +2297,6 @@ input:focus {
     margin-left: 2%;
   }
 
- 
   .menu-title-lines:first-child {
     margin: 0;
   }
@@ -2469,7 +2456,6 @@ input:focus {
   }
 }
 @media (max-width: 43em) {
-  
 }
 
 @media (max-width: 42.5em) {
@@ -2496,7 +2482,6 @@ input:focus {
     flex-direction: column;
     width: 99.6%;
   }
-
 
   .reservation-description-paragraph {
     width: 50rem;
@@ -2566,7 +2551,7 @@ input:focus {
 
     position: relative;
   }
-  
+
   .logo-title {
     margin: 0;
   }
@@ -2628,7 +2613,6 @@ input:focus {
     margin-top: 4rem;
   }
 
- 
   .reservation-form.active {
     height: 70rem;
   }
@@ -2643,7 +2627,6 @@ input:focus {
   .orders-form {
     width: 35.5rem;
   }
-
 
   .orders-form > div > div > label,
   .reservation-form > div > div > label {
@@ -2684,7 +2667,6 @@ input:focus {
   .slider {
     height: 53rem;
   }
-  
 
   @media (max-width: 37.5em) {
   }
@@ -2693,7 +2675,7 @@ input:focus {
   .table-data {
     transform: translateY(0.1rem);
   }
-  
+
   .icon-container > i {
     position: relative;
     top: 0.1rem;
@@ -2746,8 +2728,6 @@ input:focus {
     height: 48rem;
   }
 
- 
-
   .contact-description-container {
     height: 42rem;
   }
@@ -2786,7 +2766,6 @@ input:focus {
   .z-layout-top-description {
     padding-bottom: 1.8rem;
   }
-  
 }
 
 @media (max-width: 32.1875em) {
@@ -2837,8 +2816,7 @@ input:focus {
   .slider {
     height: 43rem;
   }
- 
- 
+
   .img-1 {
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
@@ -2882,12 +2860,9 @@ input:focus {
   .icon-container > i {
     height: 0.9rem;
   }
-
-
 }
 
 @media (max-width: 29em) {
- 
   .img-container {
     width: 34rem;
   }
@@ -2945,14 +2920,11 @@ input:focus {
   }
 
   .contact-header {
-
     margin-bottom: 1rem;
   }
   .contact-ele {
-  
     margin-bottom: 0.7rem;
   }
-
 }
 @media (max-width: 27.5em) {
   .course-container {
@@ -2974,7 +2946,6 @@ input:focus {
   .slider {
     height: 35.5rem;
   }
-
 
   .description-container h1 {
     font-size: 5.2rem;
@@ -3022,7 +2993,6 @@ input:focus {
   .slider {
     height: 31.5rem;
   }
- 
 }
 @media (max-width: 24.0625em) {
   .icon-container.on {
@@ -3086,7 +3056,6 @@ input:focus {
   .contact-description-container > * {
     max-width: 27rem;
   }
-  
 
   .course-container {
     max-width: 24rem;
@@ -3137,4 +3106,3 @@ input:focus {
     height: 159rem;
   }
 }
-
