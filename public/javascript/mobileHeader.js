@@ -3,29 +3,71 @@ function mobileHeader() {
   const header = document.querySelector(".header");
   const logoLink = document.querySelector(".logo-link");
   const mainNav = document.querySelector(".main-nav");
-  const mainNavList = document.querySelector(".main-nav-list");
+
   let headerState = false;
   let oneSwitch = true;
   const observer = new ResizeObserver((entries) => {
     const headerBoxElement = entries[0];
-   
+    headerMobileButton.addEventListener("click", () => {
+
+      if(headerMobileButton.classList.contains('adjust')){
+        mainNav.classList.remove("reset-hide");
+      logoLink.classList.remove("reset-hide");
+      }
+
+    });
     if (headerBoxElement.contentRect.width > 601) {
       mainNav.classList.remove("reset-hide");
       logoLink.classList.remove("reset-hide");
-      //find way to make logo link and main nav transition opacity and appear when reset is activated and header shifts to mobile button mode
+      mainNav.classList.remove("reset-active");
       oneSwitch = true;
     } else if (headerBoxElement.contentRect.width < 601) {
-     
-      if(oneSwitch === true){
-      mainNav.classList.add("reset-hide");
-      logoLink.classList.add("reset-hide");
-      setTimeout(() => {
-        mainNav.classList.remove("reset-hide");
-        logoLink.classList.remove("reset-hide");
-        
-      }, 180);
-      oneSwitch = false
-    }
+      if (oneSwitch === true) {
+        mainNav.classList.add("reset-hide");
+        logoLink.classList.add("reset-hide");
+
+ 
+        if (headerMobileButton.classList.contains("adjust")) {
+          mainNav.classList.add("reset-active");
+        } else {
+          mainNav.classList.remove("reset-active");
+        }
+
+        let msCheckArray = [];
+        let delay = 50;
+        let delayTracker = 0;
+        let intervalID;
+        let isFullyActive;
+
+        intervalID = setInterval(() => {
+          follower(mainNav);
+        }, delay);
+
+        function follower(element) {
+          if (element.classList.contains("reset-active")) {
+            msCheckArray.push(true);
+          } else {
+            msCheckArray.push(false);
+          }
+          delayTracker += delay;
+          console.log(delayTracker);
+          // delayTracker >= 300 && clearInterval(intervalID)
+          if (delayTracker >= 300) {
+            clearInterval(intervalID);
+            isFullyActive = msCheckArray.every((item) => item === true);
+            console.log(msCheckArray);
+            console.log(isFullyActive);
+            mainNav.classList.remove("reset-active");
+            if (isFullyActive === true) {
+              mainNav.classList.remove("reset-hide");
+              logoLink.classList.remove("reset-hide");
+            } else if (isFullyActive === false) {
+            }
+          }
+        }
+
+        oneSwitch = false;
+      }
     }
   });
   observer.observe(header);
@@ -47,7 +89,7 @@ function mobileHeader() {
       headerMobileButton.classList.add("freeze");
       setTimeout(() => {
         headerMobileButton.classList.remove("freeze");
-      },1250);
+      }, 1250);
       headerState = !headerState;
     }
   }

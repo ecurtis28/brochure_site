@@ -32,7 +32,7 @@ iconContainer.addEventListener("click", () => {
     }
     delayTracker += delay;
     console.log(delayTracker);
-    // delayTracker >= 300 && clearInterval(intervalID)
+   
     if (delayTracker >= 300) {
       clearInterval(intervalID);
       isFullyActive = msCheckArray.every((item) => item === true);

@@ -1,6 +1,4 @@
-// set time out is here because for some reason due to the animation getBoundingClientRect is
-// getting the wrong measurement on dish-gallery-img-container element sometimes
-// this ensures animation is done loading before measuring the element
+
 setTimeout(() => {
   setInterval(() => {
     images.forEach((image) => {
@@ -11,25 +9,14 @@ setTimeout(() => {
       const dishGalleryTitleObject =
         dishGalleryTitleElement.getBoundingClientRect();
 
-      // need to make dishGalleryBackDropWidth based off of a certain percentage of the dishGalleryTitleObject.width
-      // compared to the dishGalleryImageContainer.width
-      // then add that percentage converted to pixels to the dishGalleryTitleObject.width like this
-      // let dishGalleryBackdropWidth = dishGalleryTitleObject.width + percentToPixelVariable
+ 
       let dishGalleryBackdropWidth = dishGalleryTitleObject.width;
       let dishGalleryBackdropPercent =
         (dishGalleryTitleObject.width / dishGalleryImageContainer.width) * 100 +
         5.85;
       dishGalleryBackdropWidth =
         (dishGalleryImageContainer.width / 100) * dishGalleryBackdropPercent;
-      // let leftPixels = dishGalleryBackdropWidth / 9;
-      // dishGalleryBackdropElement.style.left = `${leftPixels}px`;
 
-      // console.log(dishGalleryImageContainer.width / 100);
-      // console.log(
-      //   "centering percent",
-      //   dishGalleryBackdropWidth / 20,
-      //   dishGalleryBackdropWidth
-      // );
     
       dishGalleryBackdropWidth = dishGalleryBackdropWidth.toString() + "px";
 

@@ -197,7 +197,7 @@ submit.addEventListener("click", (e) => {
 
 
   parentNames.forEach((parentName) => {
-    const input = parentName.children[1];
+
     const inputError = parentName.children[2].children[0];
     if (inputError.classList.contains("temporary")) {
       inputError.classList.remove("temporary");
@@ -390,7 +390,6 @@ dateInput.addEventListener("input", () => {
   dateErrorFlag1 = false;
   dateErrorFlag2 = false;
   dateErrorFlag3 = false;
-  const currentDateMS = Date.now();
   const pastDateMS = Date.now() - 86400000;
   const futureDateMS = Date.now() + 63113852000;
   const reservationDate = new Date(`${dateInput.value}`);

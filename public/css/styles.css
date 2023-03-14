@@ -165,12 +165,6 @@ a:active {
 /* #f0eeee */
 /* #b9524b */
 
-/***********************/
-/* Spacing System */
-/***********************/
-/* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
-
-/* Refactor Code at end including making it compatible with all browsers */
 
 /***********************/
 /* Header */
@@ -618,7 +612,6 @@ nav {
   display: -ms-flexbox;
   display: flex;
   flex: 1;
-  /* overflow: hidden; */
 }
 .dish-gallery-bottom {
   height: 50%;
@@ -626,7 +619,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* overflow: hidden; */
+ 
 }
 .dish-gallery-top-gap {
   background-color: #f0faf9;
@@ -716,37 +709,7 @@ nav {
   pointer-events: none;
   font-size: 2.2rem;
 }
-/* Backdrop #2 */
 
-/* .dish-gallery-img-backdrop {
-  z-index: 2;
-  top: 3.550rem;
-  left: 1.4rem;
-  width: 10rem;
-  height: 0.5rem;
-  background-color:rgb(240, 250, 249, 0.7);
-  text-decoration: none;
-  position: absolute;
-
-  font-size: 2.2rem;
-
-} */
-
-/* Backdrop #3 */
-/* .dish-gallery-img-backdrop {
-  z-index: 2;
-  top: 3.3rem;
-  left: 1.4rem;
-  width: 10rem;
-  height: 1rem;
-  background-color: rgb(185, 82, 75, 0.4);
-  text-decoration: none;
-  position: absolute;
-
-  font-size: 2.2rem;
-
-  border-radius: 10rem;
-} */
 .offset-1 {
   left: 1.4rem !important;
 }
@@ -791,7 +754,7 @@ nav {
   background-color: #8e5656;
 }
 .footer-icon-container {
-  /* margin-bottom: 3rem; */
+
   margin-top: 0.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -806,7 +769,7 @@ nav {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  /* margin-left: 4.5rem; */
+
   -webkit-transform: translateX(0.25rem);
   -ms-transform: translateX(0.25rem);
   transform: translateX(0.25rem);
@@ -923,7 +886,7 @@ nav {
   display: -ms-flexbox;
   display: flex;
   margin-top: 2.6rem;
-  /* margin-top: 2.6rem; */
+
   gap: 7rem;
   max-width: 39rem;
 }
@@ -933,7 +896,7 @@ nav {
   transform: translateX(-4rem);
 }
 .description-flex-two {
-  /* margin-left: 13rem; */
+
   -webkit-transform: translateX(4rem);
   -ms-transform: translateX(4rem);
   transform: translateX(4rem);
@@ -996,10 +959,7 @@ nav {
   transform: translateY(-0.6rem);
 }
 
-.menu-title-lines:first-child {
-}
-.menu-title-lines:last-child {
-}
+
 .dish-description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1014,7 +974,7 @@ nav {
   gap: 1.5rem;
   margin-bottom: 3rem;
   font-family: "EB Garamond Regular";
-  /* font-family: "Crimson Text Regular", "Courier New", Courier, monospace; */
+
 }
 .dish-description:last-child {
   margin-bottom: 2.5rem;
@@ -1201,7 +1161,7 @@ p.orders-description > a:visited {
   -webkit-transition: height 0.55s ease-in-out;
   -o-transition: height 0.55s ease-in-out;
   transition: height 0.55s ease-in-out;
-  /* margin-bottom: 3rem; */
+  
 }
 .orders-form > div > div > label,
 .reservation-form > div > div > label {
@@ -1360,12 +1320,12 @@ input:focus {
 
 .button-container {
   margin-top: 3rem;
-  /* position: relative; */
+  
   text-align: center;
 }
 .reservation-form button,
 .orders-form button {
-  /* position: absolute; */
+ 
   cursor: pointer;
   color: #703f37;
   width: 6em;
@@ -1581,7 +1541,7 @@ input:focus {
   text-align: center;
 }
 .table-headers-row {
-  /* margin-top: 0.1rem; */
+
   border-top: none !important;
 }
 .table-data-row {
@@ -1785,7 +1745,7 @@ input:focus {
 
 .contact-description {
   font-size: 1.8rem;
-  /* font-family: "Crimson Text Regular"; */
+
 }
 .contact-description-small {
   font-size: 1.3rem;
@@ -1804,7 +1764,7 @@ input:focus {
 
 .contact-description-email {
   font-size: 1.6rem;
-  /* text-decoration: underline; */
+
   cursor: pointer;
   margin-bottom: 0.2rem;
   color: #1f100e;
@@ -1984,7 +1944,7 @@ input:focus {
     transform: translateX(-2.5rem);
   }
   .description-flex-two {
-    /* margin-left: 13rem; */
+
     -webkit-transform: translateX(2.5rem);
     -ms-transform: translateX(2.5rem);
     transform: translateX(2.5rem);
@@ -2092,7 +2052,7 @@ input:focus {
   table.orders-cart {
     width: 55rem;
   }
-  .on {
+  .icon-container.on {
     width: 80rem;
   }
   .reservation-form,
@@ -2279,7 +2239,7 @@ input:focus {
   table.orders-cart {
     width: 45rem;
   }
-  .on {
+  .icon-container.on {
     width: 65rem;
   }
   .reservation-form,
@@ -2349,8 +2309,7 @@ input:focus {
     margin-left: 2%;
   }
 
-  .menu-title-lines {
-  }
+ 
   .menu-title-lines:first-child {
     margin: 0;
   }
@@ -2434,16 +2393,14 @@ input:focus {
   table.orders-cart {
     width: 34rem;
   }
-  .on {
+  .icon-container.on {
     width: 55.8rem;
   }
   .reservation-form,
   .orders-form {
     width: 49rem;
   }
-  /* .orders-form .active{
-    height: 44rem;
-  } */
+
   .table-row .add-amount {
     right: 18.5rem;
   }
@@ -2512,8 +2469,7 @@ input:focus {
   }
 }
 @media (max-width: 43em) {
-  .img-container {
-  }
+  
 }
 
 @media (max-width: 42.5em) {
@@ -2540,9 +2496,7 @@ input:focus {
     flex-direction: column;
     width: 99.6%;
   }
-  .slider-button {
-    /* top: 46.1%; */
-  }
+
 
   .reservation-description-paragraph {
     width: 50rem;
@@ -2583,6 +2537,7 @@ input:focus {
     opacity: 0;
     transition: none;
   }
+
   .reset-reveal {
     opacity: 1;
     transition: opacity 1s ease;
@@ -2611,8 +2566,7 @@ input:focus {
 
     position: relative;
   }
-  .logo-link {
-  }
+  
   .logo-title {
     margin: 0;
   }
@@ -2674,10 +2628,7 @@ input:focus {
     margin-top: 4rem;
   }
 
-  .active .tertiary-container {
-  }
-  .active .time-date-container {
-  }
+ 
   .reservation-form.active {
     height: 70rem;
   }
@@ -2685,15 +2636,14 @@ input:focus {
   .orders-form.active {
     height: 39.7rem;
   }
-  .on {
+  .icon-container.on {
     width: 42rem;
   }
   .reservation-form,
   .orders-form {
     width: 35.5rem;
   }
-  .form-container > input {
-  }
+
 
   .orders-form > div > div > label,
   .reservation-form > div > div > label {
@@ -2734,9 +2684,7 @@ input:focus {
   .slider {
     height: 53rem;
   }
-  .slider-button {
-    /* top: 45.6%; */
-  }
+  
 
   @media (max-width: 37.5em) {
   }
@@ -2745,8 +2693,7 @@ input:focus {
   .table-data {
     transform: translateY(0.1rem);
   }
-  .icon-container {
-  }
+  
   .icon-container > i {
     position: relative;
     top: 0.1rem;
@@ -2799,9 +2746,7 @@ input:focus {
     height: 48rem;
   }
 
-  .slider-button {
-    /* top: 45.4%; */
-  }
+ 
 
   .contact-description-container {
     height: 42rem;
@@ -2841,8 +2786,7 @@ input:focus {
   .z-layout-top-description {
     padding-bottom: 1.8rem;
   }
-  .dish-1 {
-  }
+  
 }
 
 @media (max-width: 32.1875em) {
@@ -2893,11 +2837,8 @@ input:focus {
   .slider {
     height: 43rem;
   }
-  .slider-button {
-    /* top: 44.7%; */
-  }
-  .slide {
-  }
+ 
+ 
   .img-1 {
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
@@ -2915,7 +2856,7 @@ input:focus {
   .img-container {
     width: 39rem;
   }
-  .on {
+  .icon-container.on {
     width: 32rem;
   }
   .reservation-form,
@@ -2942,15 +2883,11 @@ input:focus {
     height: 0.9rem;
   }
 
-  .table-data {
-  }
-  .shift-table-data {
-  }
+
 }
 
 @media (max-width: 29em) {
-  .table-data {
-  }
+ 
   .img-container {
     width: 34rem;
   }
@@ -3008,20 +2945,14 @@ input:focus {
   }
 
   .contact-header {
-    /* font-size: 2.8rem; */
+
     margin-bottom: 1rem;
   }
   .contact-ele {
-    /* font-size: 1.7rem; */
+  
     margin-bottom: 0.7rem;
   }
-  .contact-description-phone,
-  .contact-description-email {
-    /* font-size: 1.6rem; */
-  }
-  .contact-description-small {
-    /* font-size: 1.4rem; */
-  }
+
 }
 @media (max-width: 27.5em) {
   .course-container {
@@ -3043,9 +2974,7 @@ input:focus {
   .slider {
     height: 35.5rem;
   }
-  .slider-button {
-    /* top: 43.3%; */
-  }
+
 
   .description-container h1 {
     font-size: 5.2rem;
@@ -3093,12 +3022,10 @@ input:focus {
   .slider {
     height: 31.5rem;
   }
-  .slider-button {
-    /* top: 42.3%; */
-  }
+ 
 }
 @media (max-width: 24.0625em) {
-  .on {
+  .icon-container.on {
     width: 24rem;
   }
   .reservation-form,
@@ -3159,8 +3086,7 @@ input:focus {
   .contact-description-container > * {
     max-width: 27rem;
   }
-  .contact-description-container {
-  }
+  
 
   .course-container {
     max-width: 24rem;
@@ -3211,32 +3137,4 @@ input:focus {
     height: 159rem;
   }
 }
-/*****************************/
-/* Dish Gallery Break Points */
-/*****************************/
-/* pretty sure that the small gaps that show up in in toggle device toolbar/responsive design mode is not actually how it will display  */
-/* but I will have to check it by loading it on other devices and come up with a solution if it is broken */
-/*
- 
-  .dish-gallery-container {
-  }
-  .dish-gallery-top {
-    height: 81rem;
-  }
-  .dish-gallery-bottom {
-    height: 81rem;
-    flex: 1;
-  }
-  .dish-gallery-bottom-gap,
-  .dish-gallery-top-gap {
-    height: 3.5rem;
-  }
 
-  .dish-gallery-img-container {
-    height: 81rem;
-    width: 88rem;
-  }
-  .dish-gallery-img {
-    height: 81rem;
-    width: 88rem;
-  } */
